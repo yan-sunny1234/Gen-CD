@@ -1,0 +1,12 @@
+{
+  "combo_dir": "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p5_ls_0p9_lb_0p6",
+  "data_dir": "data/synthetic_weak_q/seed_2026",
+  "device": "cpu",
+  "epochs": 100,
+  "lambda_binary": 0.6,
+  "lambda_coverage": 0.0,
+  "lambda_q": 0.5,
+  "lambda_sparse": 0.9,
+  "noise": 0.2,
+  "run_tag": "lq_0p5_ls_0p9_lb_0p6"
+}

@@ -1,0 +1,90 @@
+{
+  "args": {
+    "data_dir": "data/synthetic_weak_q/seed_2026",
+    "noise_rate": 0.2,
+    "mode": "weak-q",
+    "epochs": 100,
+    "seed": 2026,
+    "results_dir": "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p4_ls_0p6_lb_0p4",
+    "batch_size": 64,
+    "eval_batch_size": 256,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "weight_decay": 0.0,
+    "user_dim": 32,
+    "item_dim": 32,
+    "alpha": 0.8,
+    "device": "cpu",
+    "lambda_q": 0.4,
+    "lambda_sparse": 0.6,
+    "lambda_binary": 0.4,
+    "lambda_coverage": 0.0,
+    "q_threshold": 0.5,
+    "q_pos_weight": 1.0,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "q_prior_high": 0.55,
+    "q_prior_low": 0.45,
+    "weak_q_loss_type": "mse",
+    "q_reg_warmup_fraction": 0.0,
+    "run_tag": "lq_0p4_ls_0p6_lb_0p4",
+    "patience": 20,
+    "min_delta": 0.0
+  },
+  "metadata": {
+    "num_students": 200,
+    "num_items": 30,
+    "num_concepts": 8,
+    "seed": 2026,
+    "min_concepts_per_item": 1,
+    "max_concepts_per_item": 3,
+    "min_items_per_concept": 1,
+    "noise_rates": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "noise_mode": "mixed",
+    "mixed_noise_weights": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "generator": "q_masked_mirt",
+    "response_sampling": "bernoulli",
+    "response_observation": "dense",
+    "observation_rate_requested": 1.0,
+    "observation_rate_actual": 1.0,
+    "min_student_observations": 1,
+    "min_item_observations": 1,
+    "observed_response_count": 6000,
+    "full_response_count": 6000,
+    "observed_correct_rate": 0.4945,
+    "full_response_correct_rate": 0.4945,
+    "response_columns": [
+      "user_id",
+      "item_id",
+      "score"
+    ],
+    "training_visible_files": [
+      "response.csv",
+      "Q_noise_<rate>.npy"
+    ],
+    "hidden_or_evaluation_only_files": [
+      "Q_true.npy",
+      "theta_true.npy",
+      "mastery_true.npy",
+      "item_discrimination.npy",
+      "item_difficulty.npy",
+      "response_prob.npy"
+    ]
+  },
+  "q_noise_path": "data\\synthetic_weak_q\\seed_2026\\Q_noise_0.20.npy",
+  "train_split": {
+    "train": 4200,
+    "valid": 600,
+    "test": 1200
+  }
+}

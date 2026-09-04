@@ -1,0 +1,17 @@
+run=lq_0p5_ls_0_lb_0p5 model_mode=weak-q lambda=(0.5,0.0,0.5,0.0)
+epoch=1 loss_total=0.827724 loss_rec=0.705229 valid_auc=0.694081 valid_rmse=0.490796 q_change=5 q_delta=0.050781 q_grad=0.000078
+epoch=2 loss_total=0.744649 loss_rec=0.622971 valid_auc=0.818754 valid_rmse=0.421167 q_change=70 q_delta=0.116892 q_grad=0.000269
+epoch=3 loss_total=0.603227 loss_rec=0.481823 valid_auc=0.832840 valid_rmse=0.409362 q_change=59 q_delta=0.132829 q_grad=0.000371
+epoch=4 loss_total=0.578537 loss_rec=0.458068 valid_auc=0.834176 valid_rmse=0.408471 q_change=50 q_delta=0.140643 q_grad=0.000344
+epoch=5 loss_total=0.568612 loss_rec=0.448976 valid_auc=0.834683 valid_rmse=0.408177 q_change=46 q_delta=0.150561 q_grad=0.000359
+epoch=6 loss_total=0.562903 loss_rec=0.444063 valid_auc=0.834793 valid_rmse=0.407563 q_change=42 q_delta=0.160517 q_grad=0.000364
+epoch=7 loss_total=0.556215 loss_rec=0.438138 valid_auc=0.834915 valid_rmse=0.407730 q_change=38 q_delta=0.171037 q_grad=0.000375
+epoch=8 loss_total=0.550810 loss_rec=0.433462 valid_auc=0.835271 valid_rmse=0.407964 q_change=37 q_delta=0.183028 q_grad=0.000368
+epoch=9 loss_total=0.546157 loss_rec=0.429518 valid_auc=0.835135 valid_rmse=0.407412 q_change=34 q_delta=0.194687 q_grad=0.000382
+epoch=10 loss_total=0.541628 loss_rec=0.425694 valid_auc=0.834733 valid_rmse=0.406858 q_change=31 q_delta=0.205548 q_grad=0.000379
+epoch=11 loss_total=0.537024 loss_rec=0.421742 valid_auc=0.834798 valid_rmse=0.407327 q_change=25 q_delta=0.216151 q_grad=0.000360
+epoch=12 loss_total=0.530847 loss_rec=0.416196 valid_auc=0.834038 valid_rmse=0.408207 q_change=22 q_delta=0.226423 q_grad=0.000385
+epoch=13 loss_total=0.527062 loss_rec=0.413020 valid_auc=0.834820 valid_rmse=0.410078 q_change=21 q_delta=0.236768 q_grad=0.000416
+epoch=14 loss_total=0.522129 loss_rec=0.408653 valid_auc=0.832953 valid_rmse=0.409229 q_change=20 q_delta=0.246978 q_grad=0.000394
+Early stopping at epoch 14; best_epoch=8.
+lq_0p5_ls_0_lb_0p5: success test_acc=0.7362794012829651 valid_acc=0.744951294844381

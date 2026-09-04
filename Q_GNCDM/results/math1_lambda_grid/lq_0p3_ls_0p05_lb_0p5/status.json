@@ -1,0 +1,9 @@
+{
+  "finished_at": "2026-06-29T23:05:14",
+  "lambda_binary": 0.5,
+  "lambda_coverage": 0.0,
+  "lambda_q": 0.3,
+  "lambda_sparse": 0.05,
+  "metrics_path": "Q_GNCDM\\results\\math1_lambda_grid\\lq_0p3_ls_0p05_lb_0p5\\metrics.json",
+  "status": "success"
+}

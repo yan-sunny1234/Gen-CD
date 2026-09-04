@@ -1,0 +1,33 @@
+run=weak-q_lq_0p8_ls_0p2_lb_0p05 mode=weak-q noise=0.20 train=4200 valid=600 test=1200
+epoch=1 loss_total=0.826754 loss_rec=0.725583 valid_auc=0.590569 valid_rmse=0.499680 q_change=57 q_delta=0.066212 q_grad=0.000149
+epoch=2 loss_total=0.800215 loss_rec=0.704649 valid_auc=0.604955 valid_rmse=0.498633 q_change=57 q_delta=0.095282 q_grad=0.000111
+epoch=3 loss_total=0.790279 loss_rec=0.695568 valid_auc=0.623471 valid_rmse=0.496148 q_change=54 q_delta=0.103886 q_grad=0.000142
+epoch=4 loss_total=0.776412 loss_rec=0.681373 valid_auc=0.644821 valid_rmse=0.490765 q_change=51 q_delta=0.103894 q_grad=0.000213
+epoch=5 loss_total=0.759079 loss_rec=0.662756 valid_auc=0.660190 valid_rmse=0.482050 q_change=44 q_delta=0.098421 q_grad=0.000386
+epoch=6 loss_total=0.734275 loss_rec=0.636533 valid_auc=0.668270 valid_rmse=0.477663 q_change=39 q_delta=0.099781 q_grad=0.000644
+epoch=7 loss_total=0.720869 loss_rec=0.623176 valid_auc=0.673237 valid_rmse=0.477502 q_change=40 q_delta=0.104029 q_grad=0.000786
+epoch=8 loss_total=0.717976 loss_rec=0.620428 valid_auc=0.671429 valid_rmse=0.478426 q_change=41 q_delta=0.107909 q_grad=0.000894
+epoch=9 loss_total=0.714198 loss_rec=0.616887 valid_auc=0.676004 valid_rmse=0.476224 q_change=42 q_delta=0.111298 q_grad=0.000931
+epoch=10 loss_total=0.719192 loss_rec=0.622071 valid_auc=0.674386 valid_rmse=0.477739 q_change=45 q_delta=0.114206 q_grad=0.000916
+epoch=11 loss_total=0.718907 loss_rec=0.621827 valid_auc=0.674051 valid_rmse=0.476577 q_change=43 q_delta=0.116748 q_grad=0.000971
+epoch=12 loss_total=0.712520 loss_rec=0.615575 valid_auc=0.673471 valid_rmse=0.478256 q_change=43 q_delta=0.118790 q_grad=0.000990
+epoch=13 loss_total=0.710385 loss_rec=0.613593 valid_auc=0.673694 valid_rmse=0.476670 q_change=40 q_delta=0.121813 q_grad=0.000953
+epoch=14 loss_total=0.712717 loss_rec=0.615939 valid_auc=0.672400 valid_rmse=0.479078 q_change=38 q_delta=0.123036 q_grad=0.001000
+epoch=15 loss_total=0.710371 loss_rec=0.613517 valid_auc=0.673638 valid_rmse=0.477214 q_change=37 q_delta=0.124979 q_grad=0.001002
+epoch=16 loss_total=0.713849 loss_rec=0.616952 valid_auc=0.673705 valid_rmse=0.477330 q_change=35 q_delta=0.126729 q_grad=0.001072
+epoch=17 loss_total=0.710128 loss_rec=0.613398 valid_auc=0.673315 valid_rmse=0.477326 q_change=35 q_delta=0.127405 q_grad=0.001013
+epoch=18 loss_total=0.707855 loss_rec=0.611141 valid_auc=0.673147 valid_rmse=0.478102 q_change=36 q_delta=0.128827 q_grad=0.001027
+epoch=19 loss_total=0.707961 loss_rec=0.611239 valid_auc=0.673136 valid_rmse=0.478311 q_change=37 q_delta=0.130480 q_grad=0.001068
+epoch=20 loss_total=0.707860 loss_rec=0.611149 valid_auc=0.674475 valid_rmse=0.477149 q_change=35 q_delta=0.131730 q_grad=0.001110
+epoch=21 loss_total=0.704827 loss_rec=0.608027 valid_auc=0.675301 valid_rmse=0.477748 q_change=34 q_delta=0.132590 q_grad=0.001047
+epoch=22 loss_total=0.704694 loss_rec=0.607891 valid_auc=0.673516 valid_rmse=0.477995 q_change=36 q_delta=0.133524 q_grad=0.001119
+epoch=23 loss_total=0.705104 loss_rec=0.608226 valid_auc=0.672734 valid_rmse=0.477912 q_change=33 q_delta=0.134679 q_grad=0.001079
+epoch=24 loss_total=0.702305 loss_rec=0.605424 valid_auc=0.672400 valid_rmse=0.478585 q_change=31 q_delta=0.135827 q_grad=0.001105
+epoch=25 loss_total=0.702695 loss_rec=0.605706 valid_auc=0.672433 valid_rmse=0.478382 q_change=35 q_delta=0.136853 q_grad=0.001154
+epoch=26 loss_total=0.701734 loss_rec=0.604708 valid_auc=0.672790 valid_rmse=0.478746 q_change=33 q_delta=0.137723 q_grad=0.001128
+epoch=27 loss_total=0.701416 loss_rec=0.604319 valid_auc=0.673493 valid_rmse=0.478710 q_change=32 q_delta=0.138476 q_grad=0.001133
+epoch=28 loss_total=0.706261 loss_rec=0.609079 valid_auc=0.673214 valid_rmse=0.478998 q_change=32 q_delta=0.139879 q_grad=0.001168
+epoch=29 loss_total=0.702017 loss_rec=0.604734 valid_auc=0.674219 valid_rmse=0.477666 q_change=31 q_delta=0.141088 q_grad=0.001159
+Early stopping at epoch 29; best_epoch=9.
+Saved run to C:\Users\YAN_SHU_YU\Desktop\Generative-CD\Q_GNCDM\results\weak_q_lambda_sweep\lq_0p8_ls_0p2_lb_0p05\seed_2026\noise_0.20\weak-q_lq_0p8_ls_0p2_lb_0p05
+Final metrics: q_hat_f1=0.441558 response_auc=0.683278 mastery_pearson=0.340452

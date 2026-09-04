@@ -1,0 +1,18 @@
+{
+  "learn_q": true,
+  "use_weak_q_loss": true,
+  "q_init_mode": "weak",
+  "q_init_high": 0.55,
+  "q_init_low": 0.45,
+  "q_prior_high": 0.55,
+  "q_prior_low": 0.45,
+  "weak_q_loss_type": "mse",
+  "lambda_q": 0.01,
+  "lambda_sparse": 0.0,
+  "lambda_binary": 0.0,
+  "lambda_coverage": 0.01,
+  "q_threshold": 0.5,
+  "q_pos_weight": 1.0,
+  "q_lr": 0.005,
+  "q_reg_warmup_fraction": 0.0
+}

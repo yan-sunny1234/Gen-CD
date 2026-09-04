@@ -1,0 +1,237 @@
+{
+  "noise_rate": 0.4,
+  "noise_mode": "mixed",
+  "target_perturbations_by_true_edges": 22,
+  "actual_perturbations": 22,
+  "actual_perturbation_ratio_by_true_edges": 0.39285714285714285,
+  "actual_perturbation_ratio_by_entries": 0.09166666666666666,
+  "Q_true_num_edges": 56,
+  "Q_noise_num_edges": 62,
+  "Q_true_density": 0.23333333333333334,
+  "Q_noise_density": 0.25833333333333336,
+  "deleted_edges": [
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      14,
+      2
+    ],
+    [
+      16,
+      3
+    ],
+    [
+      18,
+      2
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      23,
+      2
+    ]
+  ],
+  "added_edges": [
+    [
+      0,
+      5
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      19,
+      3
+    ],
+    [
+      22,
+      3
+    ],
+    [
+      25,
+      7
+    ],
+    [
+      26,
+      6
+    ],
+    [
+      28,
+      1
+    ],
+    [
+      29,
+      1
+    ]
+  ],
+  "flipped_positions": [
+    {
+      "position": [
+        22,
+        3
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        2,
+        2
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        0,
+        5
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        19,
+        3
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        10,
+        2
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        26,
+        6
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        10,
+        3
+      ],
+      "from": 0,
+      "to": 1
+    }
+  ],
+  "delete_operation_edges": [
+    [
+      14,
+      2
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      18,
+      2
+    ],
+    [
+      16,
+      3
+    ],
+    [
+      23,
+      2
+    ]
+  ],
+  "add_operation_edges": [
+    [
+      28,
+      1
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      29,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      25,
+      7
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      6,
+      1
+    ]
+  ],
+  "operation_counts_requested": {
+    "delete": 8,
+    "add": 7,
+    "flip": 7
+  },
+  "operation_counts_applied": {
+    "delete": 8,
+    "add": 7,
+    "flip": 7
+  },
+  "preserve_item_coverage": true
+}

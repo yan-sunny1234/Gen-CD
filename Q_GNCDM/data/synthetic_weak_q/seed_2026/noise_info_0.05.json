@@ -1,0 +1,61 @@
+{
+  "noise_rate": 0.05,
+  "noise_mode": "mixed",
+  "target_perturbations_by_true_edges": 3,
+  "actual_perturbations": 3,
+  "actual_perturbation_ratio_by_true_edges": 0.05357142857142857,
+  "actual_perturbation_ratio_by_entries": 0.0125,
+  "Q_true_num_edges": 56,
+  "Q_noise_num_edges": 55,
+  "Q_true_density": 0.23333333333333334,
+  "Q_noise_density": 0.22916666666666666,
+  "deleted_edges": [
+    [
+      14,
+      3
+    ],
+    [
+      19,
+      7
+    ]
+  ],
+  "added_edges": [
+    [
+      14,
+      6
+    ]
+  ],
+  "flipped_positions": [
+    {
+      "position": [
+        19,
+        7
+      ],
+      "from": 1,
+      "to": 0
+    }
+  ],
+  "delete_operation_edges": [
+    [
+      14,
+      3
+    ]
+  ],
+  "add_operation_edges": [
+    [
+      14,
+      6
+    ]
+  ],
+  "operation_counts_requested": {
+    "delete": 1,
+    "add": 1,
+    "flip": 1
+  },
+  "operation_counts_applied": {
+    "delete": 1,
+    "add": 1,
+    "flip": 1
+  },
+  "preserve_item_coverage": true
+}

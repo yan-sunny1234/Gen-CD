@@ -1,0 +1,17 @@
+run=lq_0p8_ls_0p2_lb_0p5 model_mode=weak-q lambda=(0.8,0.2,0.5,0.0)
+epoch=1 loss_total=0.922145 loss_rec=0.709141 valid_auc=0.613235 valid_rmse=0.494703 q_change=55 q_delta=0.063739 q_grad=0.000206
+epoch=2 loss_total=0.876424 loss_rec=0.672457 valid_auc=0.773968 valid_rmse=0.475500 q_change=46 q_delta=0.098631 q_grad=0.000198
+epoch=3 loss_total=0.750521 loss_rec=0.546855 valid_auc=0.833253 valid_rmse=0.408256 q_change=47 q_delta=0.117941 q_grad=0.000355
+epoch=4 loss_total=0.667517 loss_rec=0.465817 valid_auc=0.834789 valid_rmse=0.408275 q_change=45 q_delta=0.136243 q_grad=0.000421
+epoch=5 loss_total=0.651807 loss_rec=0.453962 valid_auc=0.835603 valid_rmse=0.407272 q_change=42 q_delta=0.153972 q_grad=0.000452
+epoch=6 loss_total=0.644434 loss_rec=0.449067 valid_auc=0.835351 valid_rmse=0.407042 q_change=45 q_delta=0.168697 q_grad=0.000470
+epoch=7 loss_total=0.635054 loss_rec=0.441347 valid_auc=0.835294 valid_rmse=0.408483 q_change=41 q_delta=0.182541 q_grad=0.000498
+epoch=8 loss_total=0.629560 loss_rec=0.436903 valid_auc=0.835974 valid_rmse=0.407154 q_change=39 q_delta=0.195716 q_grad=0.000532
+epoch=9 loss_total=0.622218 loss_rec=0.430210 valid_auc=0.835770 valid_rmse=0.407470 q_change=37 q_delta=0.209490 q_grad=0.000551
+epoch=10 loss_total=0.616971 loss_rec=0.425405 valid_auc=0.833765 valid_rmse=0.407734 q_change=36 q_delta=0.221745 q_grad=0.000590
+epoch=11 loss_total=0.611135 loss_rec=0.419776 valid_auc=0.834698 valid_rmse=0.408113 q_change=35 q_delta=0.234816 q_grad=0.000578
+epoch=12 loss_total=0.604593 loss_rec=0.413271 valid_auc=0.833633 valid_rmse=0.409418 q_change=35 q_delta=0.247993 q_grad=0.000627
+epoch=13 loss_total=0.595633 loss_rec=0.404218 valid_auc=0.833501 valid_rmse=0.412106 q_change=36 q_delta=0.261403 q_grad=0.000681
+epoch=14 loss_total=0.587801 loss_rec=0.396205 valid_auc=0.831401 valid_rmse=0.412017 q_change=36 q_delta=0.274407 q_grad=0.000704
+Early stopping at epoch 14; best_epoch=8.
+lq_0p8_ls_0p2_lb_0p5: success test_acc=0.7359230220955096 valid_acc=0.7447137087194108

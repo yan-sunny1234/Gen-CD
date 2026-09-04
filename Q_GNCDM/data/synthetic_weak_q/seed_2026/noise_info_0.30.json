@@ -1,0 +1,189 @@
+{
+  "noise_rate": 0.3,
+  "noise_mode": "mixed",
+  "target_perturbations_by_true_edges": 17,
+  "actual_perturbations": 17,
+  "actual_perturbation_ratio_by_true_edges": 0.30357142857142855,
+  "actual_perturbation_ratio_by_entries": 0.07083333333333333,
+  "Q_true_num_edges": 56,
+  "Q_noise_num_edges": 57,
+  "Q_true_density": 0.23333333333333334,
+  "Q_noise_density": 0.2375,
+  "deleted_edges": [
+    [
+      4,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      15,
+      6
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      16,
+      4
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      22,
+      5
+    ],
+    [
+      28,
+      0
+    ]
+  ],
+  "added_edges": [
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      13,
+      2
+    ],
+    [
+      29,
+      6
+    ]
+  ],
+  "flipped_positions": [
+    {
+      "position": [
+        6,
+        4
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        11,
+        5
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        16,
+        2
+      ],
+      "from": 1,
+      "to": 0
+    },
+    {
+      "position": [
+        0,
+        5
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        22,
+        5
+      ],
+      "from": 1,
+      "to": 0
+    }
+  ],
+  "delete_operation_edges": [
+    [
+      7,
+      2
+    ],
+    [
+      16,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      15,
+      6
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      20,
+      4
+    ]
+  ],
+  "add_operation_edges": [
+    [
+      1,
+      6
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      13,
+      2
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "operation_counts_requested": {
+    "delete": 6,
+    "add": 6,
+    "flip": 5
+  },
+  "operation_counts_applied": {
+    "delete": 6,
+    "add": 6,
+    "flip": 5
+  },
+  "preserve_item_coverage": true
+}

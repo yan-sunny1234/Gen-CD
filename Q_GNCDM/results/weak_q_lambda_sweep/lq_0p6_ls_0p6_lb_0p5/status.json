@@ -1,0 +1,13 @@
+{
+  "command": "C:\\D\\Anaconda\\envs\\gncdm\\python.exe C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\experiments\\run_weak_q_synthetic.py --data_dir data/synthetic_weak_q/seed_2026 --noise_rate 0.2 --mode weak-q --epochs 100 --results_dir C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p6_ls_0p6_lb_0p5 --device cpu --lambda_q 0.6 --lambda_sparse 0.6 --lambda_binary 0.5 --lambda_coverage 0.0 --run_tag lq_0p6_ls_0p6_lb_0p5 --patience 20",
+  "finished_at": "2026-06-09T05:34:19",
+  "metrics_paths": [
+    "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p6_ls_0p6_lb_0p5\\seed_2026\\noise_0.20\\weak-q_lq_0p6_ls_0p6_lb_0p5\\metrics.json"
+  ],
+  "result_dir": "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p6_ls_0p6_lb_0p5",
+  "returncode": 0,
+  "started_at": "2026-06-09T05:33:32",
+  "status": "success",
+  "stderr": "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p6_ls_0p6_lb_0p5\\stderr.log",
+  "stdout": "C:\\Users\\YAN_SHU_YU\\Desktop\\Generative-CD\\Q_GNCDM\\results\\weak_q_lambda_sweep\\lq_0p6_ls_0p6_lb_0p5\\stdout.log"
+}

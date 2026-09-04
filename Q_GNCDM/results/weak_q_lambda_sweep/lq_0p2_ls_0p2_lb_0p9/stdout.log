@@ -1,0 +1,30 @@
+run=weak-q_lq_0p2_ls_0p2_lb_0p9 mode=weak-q noise=0.20 train=4200 valid=600 test=1200
+epoch=1 loss_total=1.031941 loss_rec=0.725651 valid_auc=0.588929 valid_rmse=0.499740 q_change=56 q_delta=0.080429 q_grad=0.000296
+epoch=2 loss_total=0.983303 loss_rec=0.706071 valid_auc=0.598365 valid_rmse=0.499322 q_change=57 q_delta=0.161273 q_grad=0.000366
+epoch=3 loss_total=0.942324 loss_rec=0.700571 valid_auc=0.614498 valid_rmse=0.498682 q_change=57 q_delta=0.232612 q_grad=0.000405
+epoch=4 loss_total=0.900867 loss_rec=0.695137 valid_auc=0.636401 valid_rmse=0.498381 q_change=57 q_delta=0.289117 q_grad=0.000400
+epoch=5 loss_total=0.870777 loss_rec=0.696161 valid_auc=0.655971 valid_rmse=0.497226 q_change=57 q_delta=0.330480 q_grad=0.000367
+epoch=6 loss_total=0.843422 loss_rec=0.693484 valid_auc=0.667188 valid_rmse=0.497413 q_change=57 q_delta=0.359962 q_grad=0.000324
+epoch=7 loss_total=0.820842 loss_rec=0.689707 valid_auc=0.666105 valid_rmse=0.497354 q_change=57 q_delta=0.381165 q_grad=0.000285
+epoch=8 loss_total=0.805916 loss_rec=0.688820 valid_auc=0.658354 valid_rmse=0.496901 q_change=57 q_delta=0.396275 q_grad=0.000254
+epoch=9 loss_total=0.794167 loss_rec=0.687373 valid_auc=0.659308 valid_rmse=0.494495 q_change=57 q_delta=0.407244 q_grad=0.000246
+epoch=10 loss_total=0.786020 loss_rec=0.686886 valid_auc=0.660625 valid_rmse=0.493228 q_change=57 q_delta=0.414677 q_grad=0.000248
+epoch=11 loss_total=0.775162 loss_rec=0.681186 valid_auc=0.659944 valid_rmse=0.489130 q_change=57 q_delta=0.419806 q_grad=0.000283
+epoch=12 loss_total=0.758558 loss_rec=0.668424 valid_auc=0.660290 valid_rmse=0.487052 q_change=57 q_delta=0.423458 q_grad=0.000360
+epoch=13 loss_total=0.750269 loss_rec=0.663374 valid_auc=0.661161 valid_rmse=0.482867 q_change=57 q_delta=0.427049 q_grad=0.000415
+epoch=14 loss_total=0.744164 loss_rec=0.660033 valid_auc=0.660268 valid_rmse=0.484232 q_change=57 q_delta=0.429914 q_grad=0.000485
+epoch=15 loss_total=0.740855 loss_rec=0.659165 valid_auc=0.659475 valid_rmse=0.481769 q_change=57 q_delta=0.432723 q_grad=0.000527
+epoch=16 loss_total=0.737795 loss_rec=0.658118 valid_auc=0.660179 valid_rmse=0.481579 q_change=57 q_delta=0.434828 q_grad=0.000602
+epoch=17 loss_total=0.736483 loss_rec=0.658616 valid_auc=0.660703 valid_rmse=0.482222 q_change=57 q_delta=0.436731 q_grad=0.000583
+epoch=18 loss_total=0.730005 loss_rec=0.653695 valid_auc=0.660714 valid_rmse=0.482419 q_change=57 q_delta=0.438460 q_grad=0.000595
+epoch=19 loss_total=0.726871 loss_rec=0.651927 valid_auc=0.659621 valid_rmse=0.481773 q_change=57 q_delta=0.439944 q_grad=0.000627
+epoch=20 loss_total=0.726377 loss_rec=0.652589 valid_auc=0.661819 valid_rmse=0.480790 q_change=57 q_delta=0.441398 q_grad=0.000679
+epoch=21 loss_total=0.722827 loss_rec=0.650189 valid_auc=0.661261 valid_rmse=0.481425 q_change=57 q_delta=0.442476 q_grad=0.000638
+epoch=22 loss_total=0.722823 loss_rec=0.651114 valid_auc=0.659911 valid_rmse=0.480673 q_change=57 q_delta=0.443583 q_grad=0.000687
+epoch=23 loss_total=0.719444 loss_rec=0.648623 valid_auc=0.659286 valid_rmse=0.480811 q_change=57 q_delta=0.444616 q_grad=0.000691
+epoch=24 loss_total=0.715882 loss_rec=0.645903 valid_auc=0.661417 valid_rmse=0.481609 q_change=57 q_delta=0.445471 q_grad=0.000708
+epoch=25 loss_total=0.717684 loss_rec=0.648384 valid_auc=0.660223 valid_rmse=0.480803 q_change=57 q_delta=0.446244 q_grad=0.000757
+epoch=26 loss_total=0.716041 loss_rec=0.647411 valid_auc=0.660056 valid_rmse=0.480907 q_change=57 q_delta=0.446983 q_grad=0.000770
+Early stopping at epoch 26; best_epoch=6.
+Saved run to C:\Users\YAN_SHU_YU\Desktop\Generative-CD\Q_GNCDM\results\weak_q_lambda_sweep\lq_0p2_ls_0p2_lb_0p9\seed_2026\noise_0.20\weak-q_lq_0p2_ls_0p2_lb_0p9
+Final metrics: q_hat_f1=0.000000 response_auc=0.687790 mastery_pearson=0.306812

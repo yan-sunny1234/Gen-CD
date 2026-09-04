@@ -1,0 +1,48 @@
+{
+  "args": {
+    "data_dir": "GNCDM/data",
+    "results_dir": "Q_GNCDM/results/math1_noisy_q",
+    "noise_rates": "0.05,0.10,0.20,0.30",
+    "prediction_best_json": "Q_GNCDM/results/math1_lambda_grid/valid_prediction_best.json",
+    "balanced_best_json": "Q_GNCDM/results/math1_lambda_grid/valid_balanced_best_qf1_ge_0p8.json",
+    "epochs": 30,
+    "patience": 6,
+    "seed": 2026,
+    "batch_size": 1024,
+    "eval_batch_size": 2048,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "weight_decay": 0.0,
+    "user_dim": 32,
+    "item_dim": 32,
+    "alpha": 0.8,
+    "device": "cpu",
+    "q_threshold": 0.5,
+    "q_pos_weight": 1.0,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "q_prior_high": 0.55,
+    "q_prior_low": 0.45,
+    "weak_q_loss_type": "mse",
+    "q_reg_warmup_fraction": 0.0,
+    "min_delta": 0.0,
+    "overwrite": true
+  },
+  "config": {
+    "name": "weak-prediction-best",
+    "model_mode": "weak-q",
+    "noise_rate": 0.2,
+    "lambda_q": 0.2,
+    "lambda_sparse": 0.1,
+    "lambda_binary": 0.8,
+    "lambda_coverage": 0.0
+  },
+  "metadata": {
+    "dataset": "math1",
+    "num_students": 4209,
+    "num_items": 20,
+    "num_concepts": 11,
+    "q_expert_edges": 67,
+    "q_expert_density": 0.30454545454545456
+  }
+}

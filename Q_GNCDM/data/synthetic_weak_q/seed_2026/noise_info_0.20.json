@@ -1,0 +1,133 @@
+{
+  "noise_rate": 0.2,
+  "noise_mode": "mixed",
+  "target_perturbations_by_true_edges": 11,
+  "actual_perturbations": 11,
+  "actual_perturbation_ratio_by_true_edges": 0.19642857142857142,
+  "actual_perturbation_ratio_by_entries": 0.04583333333333333,
+  "Q_true_num_edges": 56,
+  "Q_noise_num_edges": 57,
+  "Q_true_density": 0.23333333333333334,
+  "Q_noise_density": 0.2375,
+  "deleted_edges": [
+    [
+      8,
+      2
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      23,
+      6
+    ],
+    [
+      28,
+      3
+    ]
+  ],
+  "added_edges": [
+    [
+      3,
+      2
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      11,
+      4
+    ],
+    [
+      17,
+      6
+    ],
+    [
+      23,
+      4
+    ]
+  ],
+  "flipped_positions": [
+    {
+      "position": [
+        23,
+        6
+      ],
+      "from": 1,
+      "to": 0
+    },
+    {
+      "position": [
+        11,
+        4
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "position": [
+        23,
+        4
+      ],
+      "from": 0,
+      "to": 1
+    }
+  ],
+  "delete_operation_edges": [
+    [
+      28,
+      3
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      14,
+      1
+    ]
+  ],
+  "add_operation_edges": [
+    [
+      5,
+      4
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      17,
+      6
+    ]
+  ],
+  "operation_counts_requested": {
+    "delete": 4,
+    "add": 4,
+    "flip": 3
+  },
+  "operation_counts_applied": {
+    "delete": 4,
+    "add": 4,
+    "flip": 3
+  },
+  "preserve_item_coverage": true
+}

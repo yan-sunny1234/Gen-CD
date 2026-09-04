@@ -1,0 +1,12 @@
+{
+  "dataset": "math1",
+  "num_students": 4209,
+  "num_items": 20,
+  "num_concepts": 11,
+  "q_expert_path": "GNCDM\\data\\math1_Q_matrix.npy",
+  "train_path": "GNCDM\\data\\math1_train_0.8_0.2.csv",
+  "valid_path": "GNCDM\\data\\math1_valid_0.8_0.2.csv",
+  "test_path": "GNCDM\\data\\math1_test_0.8_0.2.csv",
+  "q_expert_edges": 67,
+  "q_expert_density": 0.30454545454545456
+}

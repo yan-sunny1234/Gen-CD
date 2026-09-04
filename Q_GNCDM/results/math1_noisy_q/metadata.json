@@ -1,0 +1,8 @@
+{
+  "dataset": "math1",
+  "num_students": 4209,
+  "num_items": 20,
+  "num_concepts": 11,
+  "q_expert_edges": 67,
+  "q_expert_density": 0.30454545454545456
+}

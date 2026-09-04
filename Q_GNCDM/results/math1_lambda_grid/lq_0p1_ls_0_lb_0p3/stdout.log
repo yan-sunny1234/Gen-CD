@@ -1,0 +1,18 @@
+run=lq_0p1_ls_0_lb_0p3 model_mode=weak-q lambda=(0.1,0.0,0.3,0.0)
+epoch=1 loss_total=0.776337 loss_rec=0.702981 valid_auc=0.697824 valid_rmse=0.492601 q_change=20 q_delta=0.055875 q_grad=0.000069
+epoch=2 loss_total=0.718336 loss_rec=0.647419 valid_auc=0.818428 valid_rmse=0.438512 q_change=76 q_delta=0.135480 q_grad=0.000236
+epoch=3 loss_total=0.563219 loss_rec=0.495685 valid_auc=0.833057 valid_rmse=0.409049 q_change=77 q_delta=0.161754 q_grad=0.000373
+epoch=4 loss_total=0.526246 loss_rec=0.460182 valid_auc=0.833566 valid_rmse=0.409282 q_change=75 q_delta=0.172230 q_grad=0.000357
+epoch=5 loss_total=0.516508 loss_rec=0.451685 valid_auc=0.834099 valid_rmse=0.408801 q_change=73 q_delta=0.183751 q_grad=0.000342
+epoch=6 loss_total=0.508660 loss_rec=0.445166 valid_auc=0.834449 valid_rmse=0.408284 q_change=69 q_delta=0.193578 q_grad=0.000345
+epoch=7 loss_total=0.504361 loss_rec=0.442258 valid_auc=0.834588 valid_rmse=0.408257 q_change=69 q_delta=0.204593 q_grad=0.000342
+epoch=8 loss_total=0.496290 loss_rec=0.435601 valid_auc=0.835052 valid_rmse=0.408084 q_change=68 q_delta=0.217330 q_grad=0.000332
+epoch=9 loss_total=0.490260 loss_rec=0.431062 valid_auc=0.835248 valid_rmse=0.407426 q_change=68 q_delta=0.229495 q_grad=0.000328
+epoch=10 loss_total=0.485111 loss_rec=0.427411 valid_auc=0.834655 valid_rmse=0.406990 q_change=63 q_delta=0.240441 q_grad=0.000324
+epoch=11 loss_total=0.480693 loss_rec=0.424446 valid_auc=0.834965 valid_rmse=0.407539 q_change=62 q_delta=0.250591 q_grad=0.000294
+epoch=12 loss_total=0.476459 loss_rec=0.421643 valid_auc=0.834442 valid_rmse=0.407739 q_change=60 q_delta=0.260828 q_grad=0.000297
+epoch=13 loss_total=0.471807 loss_rec=0.418386 valid_auc=0.833947 valid_rmse=0.409465 q_change=62 q_delta=0.271043 q_grad=0.000304
+epoch=14 loss_total=0.467292 loss_rec=0.415251 valid_auc=0.833036 valid_rmse=0.409015 q_change=60 q_delta=0.281199 q_grad=0.000291
+epoch=15 loss_total=0.461431 loss_rec=0.410787 valid_auc=0.832524 valid_rmse=0.410505 q_change=58 q_delta=0.291955 q_grad=0.000280
+Early stopping at epoch 15; best_epoch=9.
+lq_0p1_ls_0_lb_0p3: success test_acc=0.7381800902827275 valid_acc=0.7463768115942029

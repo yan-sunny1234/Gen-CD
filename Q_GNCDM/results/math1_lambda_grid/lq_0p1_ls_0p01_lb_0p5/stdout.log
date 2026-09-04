@@ -1,0 +1,17 @@
+run=lq_0p1_ls_0p01_lb_0p5 model_mode=weak-q lambda=(0.1,0.01,0.5,0.0)
+epoch=1 loss_total=0.857262 loss_rec=0.730148 valid_auc=0.697482 valid_rmse=0.489971 q_change=30 q_delta=0.056354 q_grad=0.000128
+epoch=2 loss_total=0.771482 loss_rec=0.648445 valid_auc=0.810757 valid_rmse=0.446469 q_change=91 q_delta=0.135892 q_grad=0.000294
+epoch=3 loss_total=0.631723 loss_rec=0.516173 valid_auc=0.829080 valid_rmse=0.410772 q_change=92 q_delta=0.183572 q_grad=0.000377
+epoch=4 loss_total=0.576370 loss_rec=0.466628 valid_auc=0.831787 valid_rmse=0.410298 q_change=87 q_delta=0.205974 q_grad=0.000330
+epoch=5 loss_total=0.559858 loss_rec=0.455310 valid_auc=0.832938 valid_rmse=0.409392 q_change=83 q_delta=0.226783 q_grad=0.000314
+epoch=6 loss_total=0.546061 loss_rec=0.446681 valid_auc=0.832989 valid_rmse=0.409666 q_change=80 q_delta=0.246096 q_grad=0.000303
+epoch=7 loss_total=0.535607 loss_rec=0.441417 valid_auc=0.833097 valid_rmse=0.409533 q_change=79 q_delta=0.267672 q_grad=0.000304
+epoch=8 loss_total=0.524015 loss_rec=0.434989 valid_auc=0.833475 valid_rmse=0.409001 q_change=74 q_delta=0.287342 q_grad=0.000293
+epoch=9 loss_total=0.514890 loss_rec=0.430891 valid_auc=0.833427 valid_rmse=0.409119 q_change=71 q_delta=0.305531 q_grad=0.000288
+epoch=10 loss_total=0.503687 loss_rec=0.424522 valid_auc=0.832461 valid_rmse=0.409186 q_change=70 q_delta=0.321275 q_grad=0.000278
+epoch=11 loss_total=0.494756 loss_rec=0.419953 valid_auc=0.833019 valid_rmse=0.409898 q_change=69 q_delta=0.335595 q_grad=0.000258
+epoch=12 loss_total=0.486504 loss_rec=0.415674 valid_auc=0.831702 valid_rmse=0.410452 q_change=67 q_delta=0.347296 q_grad=0.000255
+epoch=13 loss_total=0.480475 loss_rec=0.413091 valid_auc=0.831625 valid_rmse=0.412003 q_change=66 q_delta=0.357518 q_grad=0.000247
+epoch=14 loss_total=0.474601 loss_rec=0.410262 valid_auc=0.831763 valid_rmse=0.411134 q_change=63 q_delta=0.366706 q_grad=0.000231
+Early stopping at epoch 14; best_epoch=8.
+lq_0p1_ls_0p01_lb_0p5: success test_acc=0.7352102637205987 valid_acc=0.7463768115942029
