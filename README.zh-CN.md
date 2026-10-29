@@ -9,6 +9,8 @@
   </p>
 </div>
 
+本仓库的 Weak-Q G-NCDM 与简单对比学习实验，请从 [Q_GNCDM/README.md](Q_GNCDM/README.md) 开始阅读。
+
 ![](figures/gcd-overview.png)
 
 ## 关于本项目

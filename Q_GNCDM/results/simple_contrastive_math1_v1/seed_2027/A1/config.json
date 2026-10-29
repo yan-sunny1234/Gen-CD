@@ -1,0 +1,50 @@
+{
+  "args": {
+    "dataset": "math1",
+    "data_dir": "GNCDM/data",
+    "results_dir": "Q_GNCDM/results/simple_contrastive_math1_v1",
+    "modes": [
+      "A0",
+      "A1",
+      "S1"
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "q_noise": 0.2,
+    "split_seed": 2026,
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "positive_noise_rate": 0.1,
+    "temperature": 0.2,
+    "lambda_cl": 0.01,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1
+  },
+  "mode": "A1",
+  "settings": {
+    "label": "weak-q",
+    "learn_q": true,
+    "contrastive": false
+  },
+  "seed": 2027,
+  "source_sha256": {
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  },
+  "protocol": "seen-student; clean support for prediction; response-flipped support only for S1 InfoNCE; query hidden from student and item inputs"
+}

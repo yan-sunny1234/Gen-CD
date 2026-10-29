@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 .claude/
+local_experiment_archive/
+Q_GNCDM/scratch/
+Q_GNCDM/data/math2/
+Q_GNCDM/data/eedi_task34/

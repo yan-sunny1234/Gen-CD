@@ -1,5 +1,7 @@
 ﻿# Math1 Clean Expert-Q Lambda Grid Search
 
+归档说明（2026-10-29）：90 组原始运行已保存到 [本地归档](../../../local_experiment_archive/2026-10-29/Q_GNCDM/results/math1_lambda_grid)。原位保留汇总、本报告、选择记录及两个验证集所选运行；汇总表中未选中组合的旧 `result_dir` 路径请对应到归档内查看。
+
 本阶段在真实 Math1 数据上使用 expert Q 作为 weak-Q 参考，搜索 weak-q 的 lambda 组合。
 
 注意：`valid_prediction_best` 与 `valid_balanced_best` 是规范选择结果；`optimistic_any_split_best` 使用 valid/test 中更高的指标，仅用于探索性观察，不应作为无偏 test 结论。

@@ -345,7 +345,7 @@ def make_markdown_report(rows: Sequence[Dict[str, Any]], out_path: Path) -> None
     md: List[str] = [
         "# Math1 Real Dataset Weak-Q Experiment",
         "",
-        "本实验将 `GNCDM/data/math1_Q_matrix.npy` 作为专家 Q 矩阵参考。真实数据没有隐藏的真实 Q，因此 Q 指标表示 learned Q 与专家 Q 的一致性，而不是绝对恢复真值。",
+        "本实验将 `Q_GNCDM/data/math1/math1_Q_matrix.npy` 作为专家 Q 矩阵参考。真实数据没有隐藏的真实 Q，因此 Q 指标表示 learned Q 与专家 Q 的一致性，而不是绝对恢复真值。",
         "",
         "## Experiment Setup",
         "",
@@ -408,7 +408,7 @@ def make_markdown_report(rows: Sequence[Dict[str, Any]], out_path: Path) -> None
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run representative Weak-Q experiments on real Math1.")
-    parser.add_argument("--data_dir", default="GNCDM/data")
+    parser.add_argument("--data_dir", default="Q_GNCDM/data/math1")
     parser.add_argument("--results_dir", default="Q_GNCDM/results/math1_real")
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--patience", type=int, default=8)

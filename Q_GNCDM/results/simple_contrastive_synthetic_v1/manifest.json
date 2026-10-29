@@ -1,0 +1,80 @@
+{
+  "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "command": "Q_GNCDM/experiments/run_simple_contrastive.py --dataset synthetic --data-dir Q_GNCDM/data/synthetic_weak_q/seed_2026 --results-dir Q_GNCDM/results/simple_contrastive_synthetic_v1 --modes A0 A1 S1 --seeds 2026 2027 2028 --epochs 30",
+  "train_shape": [
+    200,
+    30
+  ],
+  "split_lengths": [
+    4200,
+    600,
+    1200
+  ],
+  "source_sha256": {
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\synthetic_weak_q\\seed_2026\\response.csv": "b7312a080519ad36d09bd9a90082b8656feb99b379ea8eb669797ece05fe9281",
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\synthetic_weak_q\\seed_2026\\Q_noise_0.20.npy": "1ac0f8ff4c48011b0a28b468e7308568962cd6e35c912083a56ea3ce91b3af93"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6"
+  },
+  "args": {
+    "dataset": "synthetic",
+    "data_dir": "Q_GNCDM/data/synthetic_weak_q/seed_2026",
+    "results_dir": "Q_GNCDM/results/simple_contrastive_synthetic_v1",
+    "modes": [
+      "A0",
+      "A1",
+      "S1"
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "q_noise": 0.2,
+    "split_seed": 2026,
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "positive_noise_rate": 0.1,
+    "temperature": 0.2,
+    "lambda_cl": 0.01,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1
+  },
+  "modes": {
+    "A0": {
+      "label": "fixed-given-q",
+      "learn_q": false,
+      "contrastive": false
+    },
+    "A1": {
+      "label": "weak-q",
+      "learn_q": true,
+      "contrastive": false
+    },
+    "S1": {
+      "label": "weak-q-simple-contrastive",
+      "learn_q": true,
+      "contrastive": true
+    }
+  }
+}

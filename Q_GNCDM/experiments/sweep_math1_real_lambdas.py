@@ -505,7 +505,7 @@ def summarize(args: argparse.Namespace) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sweep Math1 weak-q lambda grid.")
-    parser.add_argument("--data_dir", default="GNCDM/data")
+    parser.add_argument("--data_dir", default="Q_GNCDM/data/math1")
     parser.add_argument("--results_dir", default="Q_GNCDM/results/math1_lambda_grid")
     parser.add_argument("--python_bin", default=sys.executable)
     parser.add_argument("--lambda_q_values", default="0.05,0.1,0.2,0.3,0.5,0.8")

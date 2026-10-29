@@ -10,6 +10,8 @@
   </p>
 </div>
 
+For the Weak-Q G-NCDM and simple contrastive experiments developed in this repository, start at [Q_GNCDM/README.md](Q_GNCDM/README.md).
+
 ![](figures/gcd-overview.png)
 
 ## About The Project

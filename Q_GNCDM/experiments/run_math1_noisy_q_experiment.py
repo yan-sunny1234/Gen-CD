@@ -415,7 +415,7 @@ def make_report(results_dir: Path, rows: Sequence[Dict[str, Any]]) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run Math1 artificial Q-noise experiment.")
-    parser.add_argument("--data_dir", default="GNCDM/data")
+    parser.add_argument("--data_dir", default="Q_GNCDM/data/math1")
     parser.add_argument("--results_dir", default="Q_GNCDM/results/math1_noisy_q")
     parser.add_argument("--noise_rates", default="0.05,0.10,0.20,0.30")
     parser.add_argument("--prediction_best_json", default="Q_GNCDM/results/math1_lambda_grid/valid_prediction_best.json")

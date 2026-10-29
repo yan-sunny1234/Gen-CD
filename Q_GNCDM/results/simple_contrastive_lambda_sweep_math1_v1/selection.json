@@ -1,0 +1,18 @@
+{
+  "selection_metric": "valid_auc_mean",
+  "test_metrics_not_used_for_selection": true,
+  "selected_lambda_cl": 0.05,
+  "selected_valid_auc_mean": 0.8422981702669601,
+  "baseline_results": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\results\\simple_contrastive_math1_v1",
+  "lambda_results": {
+    "0.001": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\results\\simple_contrastive_math1_lambda_0p001_v1",
+    "0.01": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\results\\simple_contrastive_math1_v1",
+    "0.05": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\results\\simple_contrastive_math1_lambda_0p05_v1"
+  },
+  "source_sha256": {
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "E:\\Desktop\\Gen-CD\\GNCDM\\data\\math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  }
+}
