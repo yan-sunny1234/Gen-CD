@@ -4,9 +4,20 @@
 
 Math1 输入位于本目录的 `data/math1/`：[训练集](data/math1/math1_train_0.8_0.2.csv)、[验证集](data/math1/math1_valid_0.8_0.2.csv)、[测试集](data/math1/math1_test_0.8_0.2.csv)和[专家 Q 矩阵](data/math1/math1_Q_matrix.npy)；从项目根目录运行实验时使用 `--data-dir Q_GNCDM/data/math1`。
 
-新增的可加载真实数据位于 `data/math2/` 和 `data/eedi_task34/`。两者均有 `train.csv`、`valid.csv`、`test.csv`（`user_id,item_id,score`）、`Q_matrix.npy`、供现有诊断函数使用的同值 `Q_true.npy` 和来源／划分 `manifest.json`。Math2 保留 16 道二值客观题（3,911 人、62,576 条作答），使用专家 Q；Eedi Task 3/4 使用 948 道题的 1,382,727 条二值作答（4,918 人），Q 根据题目元数据的二级学科标签构建，**不是专家验证的真 Q**。两套数据均按学生作答划分训练／验证／测试，Eedi 未使用官方 Task 4 冷启动划分；各数据集的指标不能直接相减当作模块收益。处理后的数据仅留在本机，已被 Git 忽略。重建脚本分别是 [prepare_math2.py](experiments/prepare_math2.py) 和 [prepare_eedi_task34.py](experiments/prepare_eedi_task34.py)。
+## 数据集
 
-新数据的统一入口是 [run_prepared_dataset.py](experiments/run_prepared_dataset.py)。例如从项目根目录运行 `.\.venv-contrastive\Scripts\python.exe -m Q_GNCDM.experiments.run_prepared_dataset --dataset math2 --check-only` 检查加载；正式 A1/S1 对照使用 `--dataset math2 --experiment-id math2_cl_v1 --modes A1 S1`，结果进入 `results/math2_cl_v1/`。默认训练种子为 2026/2027/2028，仅按验证 AUC 选模；如需固定 Q 与 Weak-Q 对照，另设实验 ID 并使用 `--modes A0 A1`。
+| 数据目录 | 学生 | 题目 | 知识点 | 去重后作答 |
+| --- | ---: | ---: | ---: | ---: |
+| [math1](data/math1/) | 4,209 | 20 | 11 | 84,180 |
+| [math2](data/math2/) | 3,911 | 16 | 16 | 62,576 |
+| [eedi_task34](data/eedi_task34/) | 4,918 | 948 | 25 | 1,382,727 |
+| [assist2012](data/assist2012/) | 4,672 | 984 | 98 | 236,439 |
+| [junyi2015](data/junyi2015/) | 5,000 | 500 | 39 | 531,967 |
+| [synthetic_weak_q/seed_2026](data/synthetic_weak_q/seed_2026/)（合成） | 200 | 30 | 8 | 6,000 |
+
+Math2 保留 16 道二值客观题；Eedi 使用题目元数据二级学科标签构建 Q；ASSISTments 2012–2013 和 Junyi 2015 是为当前密集矩阵模型选取的高频子集，分别按技能标签和练习主题构建 Q。后三者的 Q 是参考标签，**不是专家验证的真 Q**。Eedi 未使用官方 Task 4 冷启动划分，不能跨数据集直接相减指标当作模块收益。四个新增真实数据集都采用 `train.csv`、`valid.csv`、`test.csv`、`Q_matrix.npy`、兼容现有诊断函数的 `Q_true.npy` 和 `manifest.json`；[Math2](experiments/prepare_math2.py)、[Eedi](experiments/prepare_eedi_task34.py)、[ASSIST](experiments/prepare_assist2012.py)、[Junyi](experiments/prepare_junyi2015.py) 的预处理脚本可用于重建，处理后的数据已被 Git 忽略。
+
+新数据的统一入口是 [run_prepared_dataset.py](experiments/run_prepared_dataset.py)。例如从项目根目录运行 `.\.venv-contrastive\Scripts\python.exe -m Q_GNCDM.experiments.run_prepared_dataset --dataset assist2012 --check-only` 检查加载；正式 A1/S1 对照使用 `--dataset assist2012 --experiment-id assist2012_cl_v1 --modes A1 S1`，结果进入 `results/assist2012_cl_v1/`。其他数据只需替换数据集名与实验 ID。默认训练种子为 2026/2027/2028，仅按验证 AUC 选模；如需固定 Q 与 Weak-Q 对照，另设实验 ID 并使用 `--modes A0 A1`。
 
 全部 Markdown 的用途、重复关系和引用位置见[文档清单](docs/DOCUMENT_INVENTORY.md)；不再作为主线说明的第一版方案和旧排序报告见[归档索引](docs/archive/2026-10-29/INDEX.md)。
 
