@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checkpoints_replayed": 6,
+  "source_and_code_hashes": "passed",
+  "checkpoint_replay_and_test_metrics": "passed",
+  "split_disjointness": "passed at load time"
+}

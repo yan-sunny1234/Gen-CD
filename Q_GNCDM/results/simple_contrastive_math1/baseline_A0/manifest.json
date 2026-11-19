@@ -1,0 +1,89 @@
+{
+  "experiment_id": "simple_contrastive_math1/baseline_A0",
+  "dataset": "math1",
+  "baseline": "A0 fixed reference Q, no contrastive loss",
+  "single_change": "reference baseline",
+  "selection_metric": "validation AUC (validation NLL fallback)",
+  "artifact_policy": "Per condition: manifest, summary, verification, per-seed metrics and checkpoint; candidate summary includes paired A0 rows copied from baseline_A0.",
+  "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "command": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\experiments\\select_and_run_simple_contrastive.py --dataset math1",
+  "train_shape": [
+    4209,
+    20
+  ],
+  "split_lengths": [
+    58926,
+    8418,
+    16836
+  ],
+  "preparation": {
+    "dataset": "math1",
+    "source": "original Math1 prepared split and expert Q",
+    "files_sha256": {
+      "math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+      "math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+      "math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+      "math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+    }
+  },
+  "source_sha256": {
+    "math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6"
+  },
+  "args": {
+    "dataset": "math1",
+    "data_dir": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1",
+    "experiment_id": "baseline_A0",
+    "result_group": "simple_contrastive_math1",
+    "check_only": false,
+    "scratch_run": false,
+    "modes": [
+      "A0"
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "positive_noise_rate": 0.1,
+    "temperature": 0.2,
+    "lambda_cl": 0.0,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.0,
+    "lambda_coverage": 0.0,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1
+  },
+  "modes": {
+    "A0": {
+      "label": "fixed-given-q",
+      "learn_q": false,
+      "contrastive": false
+    }
+  },
+  "orchestrator_sha256": "4f059ceda66dfaf77e553c6c95482a8bce383649ceaf5e3c47574eb229286ff9"
+}

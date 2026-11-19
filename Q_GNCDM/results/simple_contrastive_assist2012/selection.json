@@ -1,0 +1,30 @@
+{
+  "experiment_id": "simple_contrastive_assist2012",
+  "dataset": "assist2012",
+  "baseline": "A0 fixed reference Q, no contrastive loss",
+  "single_change": "C0 adds response-flip InfoNCE while Q remains fixed",
+  "split": "fixed prepared train/valid/test files",
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection_metric": "mean validation AUC across seeds; lower coefficient on tie",
+  "candidate_lambdas": [
+    0.001,
+    0.005,
+    0.01,
+    0.03,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "selected_lambda_cl": 0.1,
+  "selected_result_dir": "lambda_0p1",
+  "overall_selected_condition": "lambda_0p1",
+  "overall_selected_lambda_cl": 0.1,
+  "boundary_selected": false,
+  "note": "selected_lambda_cl is the best positive coefficient; overall_selected_condition also compares A0. Test metrics were excluded from selection."
+}

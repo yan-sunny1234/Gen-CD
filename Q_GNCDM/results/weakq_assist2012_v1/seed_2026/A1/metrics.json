@@ -1,0 +1,22 @@
+{
+  "dataset": "assist2012",
+  "mode": "A1",
+  "mode_label": "weak-q",
+  "seed": 2026,
+  "best_epoch": 30,
+  "epochs_run": 30,
+  "seconds": 124.60558089998085,
+  "valid_auc": 0.7054683491309963,
+  "valid_acc": 0.756996930969722,
+  "valid_rmse": 0.41539283728480175,
+  "valid_brier": 0.17255120926751777,
+  "valid_nll": 0.5239180204900499,
+  "test_auc": 0.7070875370682548,
+  "test_acc": 0.76200144466353,
+  "test_rmse": 0.4119874027657689,
+  "test_brier": 0.16973362003768389,
+  "test_nll": 0.5167966608999575,
+  "theta_std_mean": 0.1347525715827942,
+  "q_f1_vs_reference": 0.04866386224011137,
+  "mean_actual_flip_fraction": 0.0
+}

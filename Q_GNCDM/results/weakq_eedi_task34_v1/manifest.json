@@ -1,0 +1,267 @@
+{
+  "experiment_id": "weakq_eedi_task34_v1",
+  "dataset": "eedi_task34",
+  "baseline": "A0 fixed reference Q",
+  "single_change": "A1 learns weak Q",
+  "selection_metric": "validation AUC (validation NLL fallback)",
+  "artifact_policy": "Formal runs keep root summaries plus per-seed metrics.json and best_model.pt; scratch runs keep debug intermediates.",
+  "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "command": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\experiments\\run_prepared_dataset.py --dataset eedi_task34 --experiment-id weakq_eedi_task34_v1 --modes A0 A1 --seeds 2026 2027 2028",
+  "train_shape": [
+    4918,
+    948
+  ],
+  "split_lengths": [
+    965661,
+    136111,
+    280955
+  ],
+  "preparation": {
+    "dataset": "eedi_task34",
+    "source": {
+      "name": "Eedi NeurIPS 2020 Education Challenge, Tasks 3/4 training data",
+      "url": "https://www.eedischool.com/projects/neurips-education-challenge",
+      "license": "CC BY-NC-ND 4.0; transformed data must not be redistributed",
+      "files_sha256": {
+        "train_data/train_task_3_4.csv": "8bdbe55a310641f9e59caffbff2eac85da0b2f6c6b2bb99fa69922296f52a4e1",
+        "metadata/question_metadata_task_3_4.csv": "44204e3450d0a2298fef0d940677fcd7c373b43f994cd5fec1d7381aff95001b",
+        "metadata/subject_metadata.csv": "d576a6eccc171d8eb82a284a9586c27b2bd9941f39f3fcd6ae1110470766f202"
+      }
+    },
+    "preparation": {
+      "script": "Q_GNCDM/experiments/prepare_eedi_task34.py",
+      "split_seed": 2026,
+      "split_protocol": "per-student random 70/10/20 interaction split, seen students in all sets",
+      "id_mapping": "0-based contiguous indices by ascending original UserId and QuestionId",
+      "score": "IsCorrect (binary)",
+      "q_reference": "Level-2 ancestor of each question's SubjectId tags; metadata-derived, not expert-validated",
+      "q_true_file": "Exact duplicate of Q_matrix.npy for current evaluator compatibility; reference Q only",
+      "official_competition_split": false,
+      "derived_data_redistributable": false
+    },
+    "shape": {
+      "students": 4918,
+      "items": 948,
+      "concepts": 25,
+      "responses": 1382727,
+      "q_edges": 950
+    },
+    "concepts": [
+      {
+        "index": 0,
+        "source_subject_id": 36,
+        "name": "Decimals"
+      },
+      {
+        "index": 1,
+        "source_subject_id": 37,
+        "name": "Factors, Multiples and Primes"
+      },
+      {
+        "index": 2,
+        "source_subject_id": 38,
+        "name": "Fractions, Decimals and Percentage Equivalence"
+      },
+      {
+        "index": 3,
+        "source_subject_id": 39,
+        "name": "Fractions"
+      },
+      {
+        "index": 4,
+        "source_subject_id": 40,
+        "name": "Indices, Powers and Roots"
+      },
+      {
+        "index": 5,
+        "source_subject_id": 42,
+        "name": "Negative Numbers"
+      },
+      {
+        "index": 6,
+        "source_subject_id": 54,
+        "name": "Straight Line Graphs"
+      },
+      {
+        "index": 7,
+        "source_subject_id": 59,
+        "name": "Inequalities"
+      },
+      {
+        "index": 8,
+        "source_subject_id": 61,
+        "name": "Sequences"
+      },
+      {
+        "index": 9,
+        "source_subject_id": 62,
+        "name": "Writing and Simplifying Expressions"
+      },
+      {
+        "index": 10,
+        "source_subject_id": 74,
+        "name": "Angles"
+      },
+      {
+        "index": 11,
+        "source_subject_id": 77,
+        "name": "Circles"
+      },
+      {
+        "index": 12,
+        "source_subject_id": 81,
+        "name": "Co-ordinates"
+      },
+      {
+        "index": 13,
+        "source_subject_id": 83,
+        "name": "Construction, Loci and Scale Drawing"
+      },
+      {
+        "index": 14,
+        "source_subject_id": 91,
+        "name": "Symmetry"
+      },
+      {
+        "index": 15,
+        "source_subject_id": 98,
+        "name": "Units of Measurement"
+      },
+      {
+        "index": 16,
+        "source_subject_id": 100,
+        "name": "Volume and Surface Area"
+      },
+      {
+        "index": 17,
+        "source_subject_id": 144,
+        "name": "Basic Arithmetic"
+      },
+      {
+        "index": 18,
+        "source_subject_id": 153,
+        "name": "Factorising"
+      },
+      {
+        "index": 19,
+        "source_subject_id": 154,
+        "name": "Solving Equations"
+      },
+      {
+        "index": 20,
+        "source_subject_id": 156,
+        "name": "Formula"
+      },
+      {
+        "index": 21,
+        "source_subject_id": 174,
+        "name": "2D Names and Properties of Shapes"
+      },
+      {
+        "index": 22,
+        "source_subject_id": 178,
+        "name": "Perimeter and Area"
+      },
+      {
+        "index": 23,
+        "source_subject_id": 272,
+        "name": "Similarity and Congruency"
+      },
+      {
+        "index": 24,
+        "source_subject_id": 278,
+        "name": "Transformations"
+      }
+    ],
+    "splits": {
+      "train": {
+        "responses": 965661,
+        "students": 4918,
+        "correct_rate": 0.5373573127629675
+      },
+      "valid": {
+        "responses": 136111,
+        "students": 4918,
+        "correct_rate": 0.5370543159627069
+      },
+      "test": {
+        "responses": 280955,
+        "students": 4918,
+        "correct_rate": 0.5373778719011941
+      }
+    },
+    "files_sha256": {
+      "train.csv": "1a5679aebc7de5e83fb786e29551518fdca44f81f2224a46095cf4b3f20e0ac5",
+      "valid.csv": "be9b60ce1b3ac2f95738284b322b9b9878f54fe7d7a1aa3aaab281d02e75624c",
+      "test.csv": "f24679ea9e11624d2d845c3d4804c8894be1389d4038b0f7af3326dcc675bcec",
+      "Q_matrix.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb",
+      "Q_true.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb"
+    }
+  },
+  "source_sha256": {
+    "train.csv": "1a5679aebc7de5e83fb786e29551518fdca44f81f2224a46095cf4b3f20e0ac5",
+    "valid.csv": "be9b60ce1b3ac2f95738284b322b9b9878f54fe7d7a1aa3aaab281d02e75624c",
+    "test.csv": "f24679ea9e11624d2d845c3d4804c8894be1389d4038b0f7af3326dcc675bcec",
+    "Q_matrix.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb",
+    "Q_true.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb",
+    "manifest.json": "3f9fc5e6f7e25a615ca09df9a8e1bd017eee43299d2876021d7376c3d71c1e01"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "b14c7c6fb8b059c43166d26789ab56f6e3bcb34d7373ef90472add76bf627561",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6"
+  },
+  "args": {
+    "dataset": "eedi_task34",
+    "data_dir": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\eedi_task34",
+    "experiment_id": "weakq_eedi_task34_v1",
+    "check_only": false,
+    "scratch_run": false,
+    "modes": [
+      "A0",
+      "A1"
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "positive_noise_rate": 0.1,
+    "temperature": 0.2,
+    "lambda_cl": 0.01,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1
+  },
+  "modes": {
+    "A0": {
+      "label": "fixed-given-q",
+      "learn_q": false,
+      "contrastive": false
+    },
+    "A1": {
+      "label": "weak-q",
+      "learn_q": true,
+      "contrastive": false
+    }
+  }
+}

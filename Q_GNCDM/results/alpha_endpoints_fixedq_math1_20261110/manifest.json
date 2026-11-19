@@ -1,0 +1,64 @@
+{
+  "experiment_id": "alpha_endpoints_fixedq_math1_20261110",
+  "single_change": "alpha only; independently retrained",
+  "baseline": "fixed binary reference Q, no Weak-Q, no CL, alpha=0.8",
+  "dataset": "math1",
+  "alphas": [
+    0.0,
+    0.8,
+    1.0
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "selection": "per-seed best validation AUC; test never selects",
+  "config": {
+    "dataset": "math1",
+    "experiment_id": "math1__fixed_q__baseline_60e",
+    "q_mode": "fixed",
+    "method": "baseline",
+    "lambda_aux": 0.0,
+    "view_rate": 0.1,
+    "evidence_c": 2.0,
+    "temperature": 0.2,
+    "epochs": 60,
+    "patience": 12,
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "embedding_dim": 32,
+    "alpha": 0.8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.0,
+    "lambda_coverage": 0.0,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1,
+    "scratch": false
+  },
+  "data_sha256": {
+    "math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_alpha_endpoints_fixedq.py": "f6e24811a6959e701640e53ef14bbf7a4eadce70b3fe2e3bf385e53d244a4698",
+    "Q_GNCDM\\experiments\\run_alpha_endpoints.py": "2b4c5855a767b09969d4d792b742dfcf17ed43f7b9b0236a72007970e1169a16",
+    "Q_GNCDM\\experiments\\run_test_sim_con.py": "bd9d710009177d511776f91497aa818f8ea5f123bad481e6d7992247955090a2",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5"
+  },
+  "retention": "final metrics and verification only; in-memory selected states",
+  "date": "2026-11-10"
+}

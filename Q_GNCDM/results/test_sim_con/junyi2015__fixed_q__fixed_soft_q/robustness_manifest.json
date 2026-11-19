@@ -1,0 +1,12 @@
+{
+  "mask_seed": 1801,
+  "nominal_rates": [
+    0.0,
+    0.25,
+    0.5
+  ],
+  "repeats_at_positive_rate": 2,
+  "selection_use": "none; post-selection test diagnostics only",
+  "student_and_item_evidence": "same masked training matrix",
+  "test_labels_in_evidence": false
+}

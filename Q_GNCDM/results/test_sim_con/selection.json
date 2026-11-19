@@ -1,0 +1,233 @@
+{
+  "completed_conditions": 96,
+  "rule": "Within each listed candidate set, validation only; test columns are reported after selection.",
+  "selections": [
+    {
+      "dataset": "assist2012",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "assist2012__fixed_q__baseline",
+      "selected_id": "assist2012__fixed_q__soft_0p95_0p05",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.008795363830967906,
+      "test_auc_gain_report_only": 0.008898370068913253,
+      "test_acc_gain_report_only": 0.0019327255334519178
+    },
+    {
+      "dataset": "assist2012",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 120,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "assist2012__fixed_q__baseline_120e",
+      "selected_id": "assist2012__fixed_q__soft_0p95_0p05_120e",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.004565686708130956,
+      "test_auc_gain_report_only": 0.004089401312432628,
+      "test_acc_gain_report_only": -0.0005921818974548021
+    },
+    {
+      "dataset": "assist2012",
+      "split_id": "prepared",
+      "q_mode": "weak",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "assist2012__weak_q__baseline",
+      "selected_id": "assist2012__weak_q__flip_infonce",
+      "selected_method": "flip_infonce",
+      "valid_auc_gain": 0.00020288070521690127,
+      "test_auc_gain_report_only": 0.00015693492961743605,
+      "test_acc_gain_report_only": 0.0001171348808153283
+    },
+    {
+      "dataset": "eedi_task34",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "eedi_task34__fixed_q__baseline",
+      "selected_id": "eedi_task34__fixed_q__soft_0p95_0p05",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.007086608617962398,
+      "test_auc_gain_report_only": 0.007683115799566931,
+      "test_acc_gain_report_only": 0.005771980091710982
+    },
+    {
+      "dataset": "eedi_task34",
+      "split_id": "prepared",
+      "q_mode": "weak",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "eedi_task34__weak_q__baseline",
+      "selected_id": "eedi_task34__weak_q__weak_q_no_prior",
+      "selected_method": "weak_q_no_prior",
+      "valid_auc_gain": 0.00013026678066951902,
+      "test_auc_gain_report_only": 0.00013503400940917398,
+      "test_acc_gain_report_only": 6.288076975557999e-05
+    },
+    {
+      "dataset": "eedi_task34",
+      "split_id": "resplit4242",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "eedi_task34__resplit4242__fixed_q__baseline",
+      "selected_id": "eedi_task34__resplit4242__fixed_q__soft_0p95_0p05",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.006677834019133799,
+      "test_auc_gain_report_only": 0.008062186135237348,
+      "test_acc_gain_report_only": 0.005754516135831889
+    },
+    {
+      "dataset": "junyi2015",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "junyi2015__fixed_q__baseline",
+      "selected_id": "junyi2015__fixed_q__soft_0p95_0p05",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.009868642165583474,
+      "test_auc_gain_report_only": 0.008425609367958664,
+      "test_acc_gain_report_only": 0.004258757031604277
+    },
+    {
+      "dataset": "junyi2015",
+      "split_id": "prepared",
+      "q_mode": "weak",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "junyi2015__weak_q__baseline",
+      "selected_id": "junyi2015__weak_q__flip_infonce",
+      "selected_method": "flip_infonce",
+      "valid_auc_gain": 9.156219672601384e-05,
+      "test_auc_gain_report_only": 0.00010842991646164979,
+      "test_acc_gain_report_only": 0.00017119122059328085
+    },
+    {
+      "dataset": "math1",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.5,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "math1__fixed_q__alpha0p5_baseline",
+      "selected_id": "math1__fixed_q__alpha0p5_baseline",
+      "selected_method": "baseline",
+      "valid_auc_gain": 0.0,
+      "test_auc_gain_report_only": 0.0,
+      "test_acc_gain_report_only": 0.0
+    },
+    {
+      "dataset": "math1",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "math1__fixed_q__baseline_60e",
+      "selected_id": "math1__fixed_q__fixed_soft_q",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.0009956133550019786,
+      "test_auc_gain_report_only": -0.0002025982762553502,
+      "test_acc_gain_report_only": 0.001187930624851563
+    },
+    {
+      "dataset": "math1",
+      "split_id": "prepared",
+      "q_mode": "weak",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "math1__weak_q__baseline",
+      "selected_id": "math1__weak_q__mask_project_theta",
+      "selected_method": "mask_project_theta",
+      "valid_auc_gain": 0.0005199430655529191,
+      "test_auc_gain_report_only": 0.0001436532432980142,
+      "test_acc_gain_report_only": -0.0001187930624850786
+    },
+    {
+      "dataset": "math2",
+      "split_id": "prepared",
+      "q_mode": "fixed",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "math2__fixed_q__baseline",
+      "selected_id": "math2__fixed_q__soft_0p8_0p2",
+      "selected_method": "fixed_soft_q",
+      "valid_auc_gain": 0.0026570097271227944,
+      "test_auc_gain_report_only": 0.004208004805887122,
+      "test_acc_gain_report_only": 0.0049717321514816115
+    },
+    {
+      "dataset": "math2",
+      "split_id": "prepared",
+      "q_mode": "weak",
+      "epochs": 60,
+      "alpha": 0.8,
+      "selection_metric": "mean validation AUC, 3 seeds, identical budget and alpha",
+      "baseline_id": "math2__weak_q__baseline",
+      "selected_id": "math2__weak_q__baseline",
+      "selected_method": "baseline",
+      "valid_auc_gain": 0.0,
+      "test_auc_gain_report_only": 0.0,
+      "test_acc_gain_report_only": 0.0
+    }
+  ],
+  "global_soft_q": {
+    "selection_rule": "Among soft-Q settings completed on all five prepared datasets, maximize the equal-dataset mean paired validation AUC gain; test reports only.",
+    "eligible_candidates": [
+      {
+        "q_init_high": 0.55,
+        "q_init_low": 0.45,
+        "mean_delta_valid_auc": 0.0012302388275022317,
+        "mean_delta_test_auc_report_only": 0.0011715970479910277,
+        "dataset_ids": {
+          "assist2012": "assist2012__fixed_q__fixed_soft_q",
+          "eedi_task34": "eedi_task34__fixed_q__fixed_soft_q",
+          "junyi2015": "junyi2015__fixed_q__fixed_soft_q",
+          "math1": "math1__fixed_q__fixed_soft_q",
+          "math2": "math2__fixed_q__fixed_soft_q"
+        }
+      },
+      {
+        "q_init_high": 0.95,
+        "q_init_low": 0.05,
+        "mean_delta_valid_auc": 0.00557598541112095,
+        "mean_delta_test_auc_report_only": 0.005457684482149109,
+        "dataset_ids": {
+          "assist2012": "assist2012__fixed_q__soft_0p95_0p05",
+          "eedi_task34": "eedi_task34__fixed_q__soft_0p95_0p05",
+          "junyi2015": "junyi2015__fixed_q__soft_0p95_0p05",
+          "math1": "math1__fixed_q__soft_0p95_0p05",
+          "math2": "math2__fixed_q__soft_0p95_0p05"
+        }
+      }
+    ],
+    "selected": {
+      "q_init_high": 0.95,
+      "q_init_low": 0.05,
+      "mean_delta_valid_auc": 0.00557598541112095,
+      "mean_delta_test_auc_report_only": 0.005457684482149109,
+      "dataset_ids": {
+        "assist2012": "assist2012__fixed_q__soft_0p95_0p05",
+        "eedi_task34": "eedi_task34__fixed_q__soft_0p95_0p05",
+        "junyi2015": "junyi2015__fixed_q__soft_0p95_0p05",
+        "math1": "math1__fixed_q__soft_0p95_0p05",
+        "math2": "math2__fixed_q__soft_0p95_0p05"
+      }
+    },
+    "caveat": "Campaign is exploratory: later candidates were proposed after inspecting some earlier test results."
+  }
+}

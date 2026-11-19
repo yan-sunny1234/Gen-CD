@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "in_memory_replays": 9,
+  "data_hashes": "passed",
+  "code_hashes": "passed",
+  "checkpoint_saved": false,
+  "test_used_for_selection": false,
+  "historical_alpha_0p8_reproduced_seeds": [
+    2026,
+    2027,
+    2028
+  ]
+}

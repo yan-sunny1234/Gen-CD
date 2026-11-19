@@ -1,0 +1,54 @@
+{
+  "experiment_id": "math1__fixed_q__mask_concept_consistency",
+  "baseline": "fixed Q, no auxiliary method, same epochs/split/seeds",
+  "single_change": "Mask view mastery matches clean view where both have Q-referenced evidence",
+  "selection_metric": "mean validation AUC; test never selects method or coefficient",
+  "data_source_sha256": {
+    "math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_test_sim_con.py": "c3785a8f87b0efb103147f13fc86a5432789886037a70948190e9914f99e493f",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5"
+  },
+  "split_lengths": [
+    58926,
+    8418,
+    16836
+  ],
+  "args": {
+    "dataset": "math1",
+    "experiment_id": "math1__fixed_q__mask_concept_consistency",
+    "q_mode": "fixed",
+    "method": "mask_concept_consistency",
+    "lambda_aux": 10.0,
+    "view_rate": 0.1,
+    "evidence_c": 2.0,
+    "temperature": 0.2,
+    "epochs": 60,
+    "patience": 12,
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "embedding_dim": 32,
+    "alpha": 0.8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1,
+    "scratch": false
+  }
+}

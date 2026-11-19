@@ -1,0 +1,22 @@
+{
+  "dataset": "math1",
+  "mode": "C0",
+  "mode_label": "fixed-q-simple-contrastive",
+  "seed": 2027,
+  "best_epoch": 30,
+  "epochs_run": 30,
+  "seconds": 10.309780700015835,
+  "valid_auc": 0.8360565283495949,
+  "valid_acc": 0.7434069850320741,
+  "valid_rmse": 0.4043395978578512,
+  "valid_brier": 0.1634905103958488,
+  "valid_nll": 0.4842951843303272,
+  "test_auc": 0.8314799419546444,
+  "test_acc": 0.7388928486576384,
+  "test_rmse": 0.404806634622445,
+  "test_brier": 0.1638684114343497,
+  "test_nll": 0.48334284435757985,
+  "theta_std_mean": 0.1095939576625824,
+  "q_f1_vs_reference": 1.0,
+  "mean_actual_flip_fraction": 0.10000000000000003
+}

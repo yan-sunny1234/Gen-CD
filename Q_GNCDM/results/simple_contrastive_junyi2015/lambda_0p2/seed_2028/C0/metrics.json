@@ -1,0 +1,22 @@
+{
+  "dataset": "junyi2015",
+  "mode": "C0",
+  "mode_label": "fixed-q-simple-contrastive",
+  "seed": 2028,
+  "best_epoch": 30,
+  "epochs_run": 30,
+  "seconds": 132.75125490000937,
+  "valid_auc": 0.7914189865820032,
+  "valid_acc": 0.7521887636920419,
+  "valid_rmse": 0.4095171595765833,
+  "valid_brier": 0.16770430398767278,
+  "valid_nll": 0.5060735566363757,
+  "test_auc": 0.7976542414182975,
+  "test_acc": 0.7539531656860713,
+  "test_rmse": 0.40753834672578165,
+  "test_brier": 0.16608750405198341,
+  "test_nll": 0.5017210143335251,
+  "theta_std_mean": 0.060790736228227615,
+  "q_f1_vs_reference": 1.0,
+  "mean_actual_flip_fraction": 0.0998594111858523
+}

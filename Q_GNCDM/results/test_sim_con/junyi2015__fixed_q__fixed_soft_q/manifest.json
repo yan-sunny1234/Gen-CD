@@ -1,0 +1,56 @@
+{
+  "experiment_id": "junyi2015__fixed_q__fixed_soft_q",
+  "baseline": "fixed Q, no auxiliary method, same epochs/split/seeds",
+  "single_change": "Fixed 0.55/0.45 Q in place of fixed binary Q",
+  "selection_metric": "mean validation AUC; test never selects method or coefficient",
+  "data_source_sha256": {
+    "train.csv": "47c6181d16a51c8bfdfd0a0495db01c7046f7ad3e1e699093f695681ee4a69a1",
+    "valid.csv": "c1e6c126a694e37666b95a456e34f78abdfc5f3790d5bdd26e4d3da38f89d8ed",
+    "test.csv": "9079ca054af3a73d993758a8fc3b0911d295f286a4acba9595d7fef8f3ff22bd",
+    "Q_matrix.npy": "ebb26f466e6db2cf5262d1c6084396ab1ec7932ed00685f5313aec0c9af82104",
+    "Q_true.npy": "ebb26f466e6db2cf5262d1c6084396ab1ec7932ed00685f5313aec0c9af82104",
+    "manifest.json": "f9472b4f6524421051af04bcf50266e55e47002f48dde0cb5fb6cefbe9500865"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_test_sim_con.py": "c3785a8f87b0efb103147f13fc86a5432789886037a70948190e9914f99e493f",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5"
+  },
+  "split_lengths": [
+    370038,
+    50942,
+    110987
+  ],
+  "args": {
+    "dataset": "junyi2015",
+    "experiment_id": "junyi2015__fixed_q__fixed_soft_q",
+    "q_mode": "fixed",
+    "method": "fixed_soft_q",
+    "lambda_aux": 0.0,
+    "view_rate": 0.1,
+    "evidence_c": 2.0,
+    "temperature": 0.2,
+    "epochs": 60,
+    "patience": 12,
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "embedding_dim": 32,
+    "alpha": 0.8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1,
+    "scratch": false
+  }
+}

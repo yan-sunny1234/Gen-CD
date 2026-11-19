@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>组会汇报：弱监督可学习 Q 的十个创新方向筛查与 D2 深入分析</title>
+<style>
+  :root {
+    --ink: #1f2933; --muted: #5f6b76; --accent: #1a5276; --accent2: #2874a6;
+    --pos: #1e8449; --posbg: #e8f6ef; --neg: #b03a2e; --negbg: #fdedec;
+    --mid: #7f8c8d; --midbg: #f2f4f4; --warn: #b9770e; --warnbg: #fef5e7;
+    --line: #d5dbdb; --soft: #f7f9f9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    color: var(--ink); margin: 0; background: #eef1f4;
+    line-height: 1.75; font-size: 15.5px;
+  }
+  .page { max-width: 980px; margin: 24px auto 60px; background: #fff;
+          padding: 44px 56px 56px; box-shadow: 0 2px 14px rgba(0,0,0,.08);
+          border-top: 5px solid var(--accent); }
+  h1 { font-size: 25px; color: var(--accent); margin: 4px 0 6px; line-height: 1.4; }
+  .meta { color: var(--muted); font-size: 13.5px; border-bottom: 1px solid var(--line);
+          padding-bottom: 14px; margin-bottom: 26px; }
+  h2 { font-size: 19px; color: var(--accent); border-left: 5px solid var(--accent);
+       padding-left: 10px; margin: 34px 0 12px; }
+  h3 { font-size: 16px; color: var(--accent2); margin: 22px 0 8px; }
+  p { margin: 8px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 18px; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: center; }
+  th { background: var(--accent); color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: var(--soft); }
+  td.left, th.left { text-align: left; }
+  .best td { background: var(--posbg) !important; font-weight: 700; }
+  .chip { display: inline-block; padding: 1px 10px; border-radius: 12px;
+          font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+  .pos   { background: var(--posbg); color: var(--pos); }
+  .conf  { background: #eaf2f8; color: var(--accent2); }
+  .midc  { background: var(--midbg); color: var(--mid); }
+  .neg   { background: var(--negbg); color: var(--neg); }
+  .stop  { background: #fadbd8; color: #922b21; }
+  .warn  { background: var(--warnbg); color: var(--warn); }
+  .box { border: 1px solid var(--line); border-left: 5px solid var(--accent2);
+         background: var(--soft); padding: 12px 16px; margin: 14px 0; border-radius: 4px; }
+  .d2box { border: 2px solid var(--pos); background: var(--posbg);
+           padding: 16px 20px; margin: 16px 0; border-radius: 6px; }
+  .d2box h3 { color: var(--pos); margin-top: 4px; }
+  pre { background: #273747; color: #dbeafe; padding: 14px 16px; border-radius: 6px;
+        overflow-x: auto; font-size: 13px; line-height: 1.6; }
+  code { font-family: Consolas, "Courier New", monospace; }
+  p code, td code, li code { background: #eef2f5; padding: 1px 5px; border-radius: 3px;
+        font-size: 13px; color: #34495e; }
+  ul, ol { margin: 6px 0 12px; padding-left: 26px; }
+  li { margin: 4px 0; }
+  .toc { background: var(--soft); border: 1px solid var(--line); border-radius: 6px;
+         padding: 12px 24px; font-size: 14px; }
+  .toc a { color: var(--accent2); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .small { color: var(--muted); font-size: 13px; }
+  .kpi { display: flex; gap: 14px; margin: 14px 0; flex-wrap: wrap; }
+  .kpi .card { flex: 1 1 180px; border: 1px solid var(--line); border-radius: 6px;
+               text-align: center; padding: 10px 6px; background: #fff; }
+  .kpi .num { font-size: 24px; font-weight: 800; color: var(--pos); }
+  .kpi .lbl { font-size: 12.5px; color: var(--muted); }
+  @media print { body { background:#fff; } .page { box-shadow:none; margin:0; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>组会汇报：弱监督可学习 Q 的十个创新方向筛查与 D2 深入分析</h1>
+<div class="meta">
+汇报人：＿＿＿　|　日期：2026-11-10　|　项目：Weak-Q G-NCDM（基于《Generative Cognitive Diagnosis》，arXiv:2507.09831）　|　本轮实验 ID：<code>wqcl_ten_screen_v1</code>
+</div>
+
+<div class="toc">
+<b>目录</b>　
+<a href="#s1">一、背景与概览</a> ·
+<a href="#s2">二、十方向判定总表</a> ·
+<a href="#s3">三、重点：D2 深入分析</a> ·
+<a href="#s4">四、其余各点结论</a> ·
+<a href="#s5">五、三个跨点发现</a> ·
+<a href="#s6">六、下一阶段计划</a> ·
+<a href="#s7">附录：目录与复现</a>
+</div>
+
+<h2 id="s1">一、研究背景与本阶段工作概览</h2>
+<p><b>基线模型</b>：G-NCDM 用固定专家 Q 矩阵连接题目与知识点，Q 参与两处计算——学生显式掌握生成
+<code>θ_exp = σ(R·Q/√K)</code>，以及预测掩码 <code>θ⊙q、ψ⊙q</code>。</p>
+<p><b>我们的主线</b>：真实数据中 Q 来自专家标注/技能标签/元数据，质量参差。把 Q 从"固定常量"改为
+<b>"弱监督可学习的软矩阵"（Weak-Q）</b>，并在同一实验协议下检验对比学习（CL）能否进一步改善诊断。</p>
+<p><b>此前已确立的两块地基</b>（本阶段的地板）：</p>
+<p>① <b>Weak-Q 的预测收益在五套真实数据上一致为正</b>（3 训练种子配对、按验证 AUC 选模）：</p>
+<table>
+<tr><th class="left">数据集</th><th>A0→A1 ΔAUC</th><th>ΔACC</th></tr>
+<tr><td class="left">Math1</td><td>+0.0056</td><td>+0.0041</td></tr>
+<tr><td class="left">Math2</td><td>+0.0071</td><td>+0.0030</td></tr>
+<tr><td class="left">Eedi Task3/4</td><td>+0.0084</td><td>+0.0039</td></tr>
+<tr><td class="left">ASSISTments2012</td><td>+0.0184</td><td>+0.0102</td></tr>
+<tr><td class="left">Junyi2015</td><td>+0.0111</td><td>+0.0062</td></tr>
+</table>
+<p>② <b>96 条件机制排查（test_sim_con）</b>：六种对比学习变体（翻转/遮蔽 InfoNCE、投影头×2、预测一致性、证据加权一致性）在五套数据上均无稳定收益；<b>固定 0.95/0.05 软 Q</b>（不学习、无 CL）反而是收益最清楚的强对照（ΔAUC 最高 +0.0088，5/5 数据同向）。→ CL 路线需要换问题定义；Q 结构侧握着已证实的收益。</p>
+<div class="box">
+<b>本阶段（近两周）做了什么</b>：围绕"让 Q 侧与 CL 侧的机制可验证"设计了<b>十个创新方向</b>，全部实现并完成阶段 1 筛查实验（<b>34 个训练条件</b>，单种子 2026、40 epoch、Math1 + 合成数据、CPU），另建两个可复用评估工具（可辨识性探针、k-shot 分证据协议）。<span class="small">所有结论为筛查级（单种子），用于定方向，不作为正式收益声明。</span>
+</div>
+
+<h2 id="s2">二、十个方向与判定总表</h2>
+<table>
+<tr><th class="left"># 方向（一句话）</th><th>判定</th><th class="left">关键数字</th><th class="left">下一步</th></tr>
+<tr><td class="left"><b>D2</b> 有限 Q 编辑（软预算）＋题目作答-结构对比</td>
+<td><span class="chip pos">✅ ACC/AUC 双正</span></td>
+<td class="left"><b>ACC 0.7493 全场最佳</b>；AUC 0.8384 最高</td>
+<td class="left">阶段 2：Eedi/Junyi 主场 + 严格归因</td></tr>
+<tr><td class="left"><b>8 TRQ</b> 训练时对 Q 做信任域扰动并要求预测一致</td>
+<td><span class="chip pos">✅ 弱正</span></td>
+<td class="left">Q-F1 +0.009~+0.014；synthetic AUC +0.0058</td>
+<td class="left">λ/δ 网格 + 路径归因</td></tr>
+<tr><td class="left"><b>10 E3A</b> 低证据学生收缩到解析能力锚</td>
+<td><span class="chip warn">⚠️ 排序正、校准未跟上</span></td>
+<td class="left">k=2 ΔAUC +0.0058 但 ΔACC −0.0024，NLL/Brier 全 k 变差</td>
+<td class="left">先改 logit 空间锚定</td></tr>
+<tr><td class="left"><b>6 IPW-Q</b> 测量"可学习 Q 是否损害可辨识性"</td>
+<td><span class="chip conf">✅ 确认性结论</span></td>
+<td class="left">weakq Sep1 0.2204 &gt; 固定二值 0.2105，未退化</td>
+<td class="left">作为论文可靠性分析</td></tr>
+<tr><td class="left"><b>D5</b> 非对称 Q 噪声后验（漏标/多标分开）</td>
+<td><span class="chip pos">✅ synthetic 正</span></td>
+<td class="left"><b>+0.0092</b>（全场最大单点增益）</td>
+<td class="left">对称/非对称对照 + 结构 CL</td></tr>
+<tr><td class="left"><b>D4</b> 概念局部编辑效应</td>
+<td><span class="chip midc">➖ 中性（机制触发）</span></td>
+<td class="left">sign_correct 0.627：模型确有概念局部性</td>
+<td class="left">收作分析素材</td></tr>
+<tr><td class="left"><b>D1</b> 跨证据概念关系对比</td>
+<td><span class="chip midc">➖ 收益未现</span></td>
+<td class="left">+0.0004；122 关系对/batch</td>
+<td class="left">换 Eedi（锚充足）重测</td></tr>
+<tr><td class="left"><b>D3</b> 概念残差对比</td>
+<td><span class="chip midc">➖ 无收益</span></td>
+<td class="left">−0.0006；等价分解核验 3.6e-07</td>
+<td class="left">定向合成重测</td></tr>
+<tr><td class="left"><b>9 SACA</b> 单概念锚校准证据归因</td>
+<td><span class="chip neg">❌ 负结果</span></td>
+<td class="left">归因相关 −0.12（方向反了）</td>
+<td class="left">改排序式损失 + 换 Eedi</td></tr>
+<tr><td class="left"><b>7 ECW-Q</b> 边级置信度加权弱先验</td>
+<td><span class="chip stop">❌ 阶段 0 止损</span></td>
+<td class="left">噪声边 AUC 全部 &lt;0.7（预设门槛）</td>
+<td class="left">思想并入 D2</td></tr>
+</table>
+<p><b>ACC 视角</b>：全部 34 个条件按 test ACC 排序，<b>第一名是 D2（0.7493）</b>，第二名 TRQ-random（0.7479，+0.0016 弱信号）；E3A（0.7392）与 D5（0.7390）对 ACC 为负；其余变化在噪声级。synthetic 的 ACC 钉在 0.5133 多数类上，不具区分度。</p>
+
+<h2 id="s3">三、重点展开：D2 有限 Q 编辑与题目作答-结构对比</h2>
+
+<div class="d2box">
+<h3>一句话结论</h3>
+<p style="margin:4px 0"><b>D2 是十个方向中唯一 ACC/AUC 双正的点：Math1 ACC 0.7493（全场最佳，+0.0030）、AUC 0.8384（全场最高），且增益可归因——同初始化对照下净贡献约 +0.0074。</b></p>
+<div class="kpi">
+<div class="card"><div class="num">0.7493</div><div class="lbl">test ACC · 34 条件第 1</div></div>
+<div class="card"><div class="num">0.8384</div><div class="lbl">test AUC · 34 条件最高</div></div>
+<div class="card"><div class="num">+0.0074</div><div class="lbl">同初始化净贡献</div></div>
+<div class="card"><div class="num">0.943</div><div class="lbl">Q-F1 · 预算锚定生效</div></div>
+</div>
+</div>
+
+<h3>3.1 要解决的问题</h3>
+<p>A1（可学习 Q）虽然预测更好，但学到的 Q 会<b>无差别稠密化</b>（硬密度 0.33–0.64，参考 Q 只有 0.01–0.30），与参考 Q 的 F1 很低——Q 在"搬运总体答题表现"，而不是恢复题目真正的概念构成。D2 的想法：<b>给每道题一个"编辑预算"，让对比学习只在预算内选择"哪些 Q 关联值得修改"。</b></p>
+
+<h3>3.2 机制（三个组件）</h3>
+<pre>① 统一编辑起点：P0 = 0.05 + 0.90·Q_ref（参考边=0.95，非参考边=0.05），S 初始化 = logit(P0)
+② 软预算：E_j = Σ_k|Q_jk − P0_jk| / 0.90；L_budget = mean_j[relu(E_j − B)]²   （B=每题预算，起步 1）
+③ 题目端对比：每题两组不相交学生 → 残差画像 ρ_ij = m_ij(y_ij − p̂_ij)（Rasch 教师去难度）
+   → 小 MLP 出 K 维"作答视图"；结构视图 = normalize(q_j)（固定标准基，防 Q 与原型共旋转）
+   → InfoNCE：正对 = 同题两视图；负对 = 难度/作答量相近且参考标签不相交的题
+总损失 = 预测 BCE + λq·弱先验 + λb·L_budget + λcl·L_RQ     （CL→Q 有直接梯度路径）</pre>
+
+<div class="box">
+<h3 style="margin-top:0">3.2★ 逐组件详解（含数值例子）</h3>
+
+<p><b>组件①：为什么起点是 P0 = 0.05 + 0.90·Q_ref，而不是 0.55/0.45？</b><br>
+旧初始化让所有边挤在 0.5 附近：非参考边带 0.45 权重，模型不改任何边就能靠这层"背景通道"传信息；按 0.5 阈值切二值 Q 时大量边随机翻（无约束版 Q-F1 只有 0.437 的原因之一）。P0 把默认答案设为"参考边 0.95 / 非参考边 0.05"，S = logit(P0) 作起点。0.95/0.05 <b>不是 0/1</b>：故意留窄通道让"参考标错了"的边仍能被证据扳回（weak supervision 本意），偏离幅度由组件②管。</p>
+<pre>数值例子（K=5，某题标注概念 1 和 3）：
+Q_ref 行 = [1, 0, 1, 0, 0]  →  P0 行 = [0.95, 0.05, 0.95, 0.05, 0.05]
+S 初始  = [+2.944, −2.944, +2.944, −2.944, −2.944]</pre>
+
+<p><b>组件②：软预算在算什么？</b>编辑量 <code>E_j = Σ_k|Q_jk − P0_jk| / 0.90</code>——除以 0.90 表示"一条边从 0.05 完全反转到 0.95 记 1 个完整编辑单位"，即 E_j ≈ 这道题被改了几个完整边。惩罚 <code>L_budget = mean_j[max(0, E_j − B)]²</code> 只罚超额、平方增长。</p>
+<table>
+<tr><th class="left">同一道题的状态（B=1，参考={1,3}）</th><th>Q 行假设</th><th>E_j</th><th class="left">结果</th></tr>
+<tr><td class="left">刚开始（=P0）</td><td>[0.95, 0.05, 0.95, 0.05, 0.05]</td><td>0</td><td class="left">不罚</td></tr>
+<tr><td class="left">小修正</td><td>[0.90, 0.30, 0.90, 0.05, 0.05]</td><td>0.33</td><td class="left">预算内不罚——有证据的小修正自由</td></tr>
+<tr><td class="left">大漂移</td><td>[0.10, 0.80, 0.90, 0.60, 0.05]</td><td>2.39</td><td class="left">超 1.39 → 罚 1.93，强力拉回</td></tr>
+</table>
+<p>核心证据：无预算版 Q-F1 0.437（乱翻），加预算后 <b>0.943</b> 且 ACC 反而最高——"少改、按证据改，更准"。软预算只是惩罚不是硬上限，因此另报"真实跨越 0.5 的增删边数"。</p>
+
+<p><b>组件③：两视图怎么造、为什么这样造？</b></p>
+<ul>
+<li><b>作答视图（证据侧）三步</b>：①去难度——残差 ρ_ij = m_ij(y_ij − p̂_ij)，p̂ 是 Rasch 教师（只用总能力 a_i 与题目难度 b_j）的预测；不去难度时画像最强信号是"这题难"，去掉后剩下的才是"哪类学生异常好/差"。②每 epoch 把学生对半随机分 U/V 两组各造一个视图——同题两份独立证据互相对齐，防记忆特定学生。③[ρ, m] 拼接过小 MLP 出 K 维——<b>掩码必须输入</b>，区分"没观察到"与"观察到且零残差"。</li>
+<li><b>结构视图（标注侧）</b>：z_j^Q = normalize(q_j)（当前可学习 Q 的行）。"固定标准基"= 概念 k 的坐标就是 e_k，不给 Q 配可学习原型——否则 Q 与原型可一起旋转成"题目 ID 编码"，对比损失被无意义满足；坐标钉死则语义钉死。</li>
+<li><b>InfoNCE 规则</b>：正对 = 同题作答视图↔结构视图（U/V 各一次）；负对 = 参考标签不相交（防假负）且难度/作答量相近（堵难度捷径）的其它题。</li>
+</ul>
+<p><b>梯度路径</b>：L_RQ → normalize(q_j) → Q → S 是最短路径。直觉：若某题学生残差画像"像方程题"而结构视图指向"分式"，InfoNCE 推动 Q 行向"方程"转——即"作答证据选择哪些 Q 关联值得修改"。</p>
+
+<p><b>总损失分工</b>：BCE 管预测精度；弱先验把 Q 拉向 P0；预算限制总修改量；L_RQ 决定修改方向——四项都对 Q 有梯度但分工不同。</p>
+<p><b>贯穿迷你例子</b>：某题参考标注={分式}，而 U/V 两组学生中"方程好的人"在该题去难度残差都显著更高 → 组件③推动增加 Q 的"方程"边；组件②允许这种有证据的小修正（0.33 单位，不罚）但阻止全场大改；组件①保证参照系是 P0。最终 Q-F1 0.943：绝大多数边保持参考，少数边被证据移动，预测 ACC 全场最高。</p>
+</div>
+
+
+<h3>3.3 结果与归因链（Math1，单种子）</h3>
+<table>
+<tr><th class="left">条件</th><th>test ACC</th><th>test AUC</th><th>Q-F1（与参考一致率）</th></tr>
+<tr><td class="left">fixed_binary（固定参考 Q）</td><td>0.7418</td><td>0.8331</td><td>1.000</td></tr>
+<tr><td class="left">fixed_soft（同 P0 初始化、冻结 Q）</td><td>0.7419</td><td>0.8335</td><td>1.000</td></tr>
+<tr><td class="left">weakq_ctrl（0.55/0.45 可学习、无预算）</td><td>0.7463</td><td>0.8376</td><td>0.437</td></tr>
+<tr class="best"><td class="left">d2_full（P0 初始化 + 预算 + 题目 CL）</td><td>0.7493</td><td>0.8384</td><td>0.943</td></tr>
+</table>
+<p><b>三条归因证据：</b></p>
+<ol>
+<li><b>全场最佳 ACC 0.7493</b>（34 个条件第 1），比 weakq_ctrl 高 +0.0030；AUC 0.8384 也是全场最高——<b>ACC/AUC 双正，十个点里唯一</b>。</li>
+<li><b>同初始化归因</b>：fixed_soft 与 D2 同用 P0 初始化，但冻结 Q、无预算无 CL，ACC 只有 0.7419——P0 初始化本身让 ACC 下降约 0.0044；D2 从这个更差起点反超到 0.7493，<b>预算 + 题目 CL 相对自身初始化基线的净贡献约 +0.0074</b>。</li>
+<li><b>预算确实在起作用</b>：Q-F1 = 0.943（无约束可学习版只有 0.437）——Q 被锚在参考附近做"少量、有据"的修改，同时预测反而最好，软预算"少而准"的设想得到数据支持。</li>
+</ol>
+
+<h3>3.4 为什么有效（机制解释）</h3>
+<ul>
+<li><b>预算约束 IRF 掩码不漂移</b> → 预测头 (θ⊙q − ψ⊙q) 的输入分布稳定 → ACC 直接受益；</li>
+<li><b>对比对象从学生换成题目</b>：题目端 CL 对 Q 的梯度路径最短（L_RQ → norm(q_j) → Q → S），不同于学生端 InfoNCE 的迂回路径（后者已被 96 条件排查证明无效）；</li>
+<li><b>残差画像去难度</b>：作答视图用 Rasch 残差而非原始正确率，避免 CL 退化为"学题目难度"。</li>
+</ul>
+
+<h3>3.5 诚实的边界</h3>
+<ul>
+<li>单种子筛查；历史三种子实验中 Math1 ACC 的种子间标准差 ≈0.0013–0.0015，+0.0030 ≈ 2σ，<b>方向可信、量级需阶段 2 确认</b>；</li>
+<li>Math1 只有 20 题，题目端 InfoNCE 负例池极小——<b>Math1 只是冒烟场，D2 的真正主场是 Eedi（948 题）/Junyi（500 题）</b>；</li>
+<li>synthetic 上为负（−0.05 AUC）：其参考 Q 被注入 20% 噪声，预算把 Q 锁向有噪参考当然受伤——见第五节跨点发现②；</li>
+<li>严格归因还差一个条件：同 P0 初始化 + 可学习 Q + 无预算无 CL（统一基线 learned_no_prior），已列入阶段 2。</li>
+</ul>
+
+<h3>3.6 下一步（阶段 2，按优先级）</h3>
+<ol>
+<li>补 learned_no_prior 条件，完成"初始化 / 学习 / 预算 / CL"四段归因；</li>
+<li>Eedi、Junyi 三种子正式对照（题目端主场）；</li>
+<li>预算 B ∈ {1,2} 与 λb 小网格；报告 Q 增删边数、跨种子编辑一致率；</li>
+<li>若成立，与概念关系 CL 组合：预算约束"改多少"，关系 CL 约束"改出来的结构能否支持可重复的概念差异"。</li>
+</ol>
+
+<h2 id="s4">四、其余各点：一句话结论与关键数字</h2>
+<table>
+<tr><th class="left">方向</th><th class="left">结论</th></tr>
+<tr><td class="left"><b>TRQ</b>（信任域扰动一致性）</td><td class="left">把"固定软 Q 为什么有效"显式化为训练正则。Math1 Q-F1 +0.009~+0.014、ACC +0.0016；synthetic AUC +0.0058。对抗版（一步符号梯度）无效——阶段 2 只保留 random 版并做 exp/mask 单路径归因。</td></tr>
+<tr><td class="left"><b>E3A</b>（证据自适应锚定）</td><td class="left">k-shot 下 k=2 AUC <b>+0.0058</b>、k=5 +0.0023，但 <b>ACC 在 k=2 反而 −0.0024，NLL/Brier 全部 k 恶化</b>——收益只在排序层面，概率空间收缩破坏校准。修正：锚定移到 logit 空间、n0 按验证 NLL 选。其 k-shot 评估协议是本阶段最有复用价值的产出。</td></tr>
+<tr><td class="left"><b>IPW-Q</b>（可辨识性）</td><td class="left">预设判据"分离度下降 &gt;20% 才启动约束"——实测方向相反（Sep +4.7%、IDS +6.8%），得到<b>确认性结论</b>：弱监督可学习 Q 不损害生成式诊断的可辨识性。直接支撑论文可靠性章节。</td></tr>
+<tr><td class="left"><b>D5</b>（非对称噪声后验）</td><td class="left">synthetic <b>+0.0092</b>（全场最大单点增益）；Math1 中性（参考可靠，无结构不确定性可利用）。边熵 0.26–0.32 表明 π 显著硬化，阶段 2 加结构 CL 时需防"提前硬化消除视图差异"。</td></tr>
+<tr><td class="left"><b>D4</b>（编辑效应）</td><td class="left">预测无变化，但 <b>sign_correct=0.627</b>（相关概念探针效应大于无关探针的比例，随机为 0.5）——模型存在中等程度的概念局部性，作为模型行为分析素材。</td></tr>
+<tr><td class="left"><b>D1 / D3</b></td><td class="left">机制验证全部通过（关系对 122/batch 且梯度非零；G+U 分解误差 3.6e-07），收益未现——主因是数据（缺锚 / 缺"偏科群体"），换 Eedi 与定向合成后重测。</td></tr>
+<tr><td class="left"><b>SACA</b></td><td class="left">归因相关 −0.12，方向学反——负结果如实保留；改排序式归因损失后再测。</td></tr>
+<tr><td class="left"><b>ECW-Q</b></td><td class="left">三种经典统计量找噪声边的 AUC 全部低于预设 0.7 门槛（最好 0.665），按预设止损；"置信度"思想并入 D2。</td></tr>
+</table>
+
+<h2 id="s5">五、三个跨点发现（比单点结果更值钱）</h2>
+<ol>
+<li><b>Math1 参考Q没有任何单概念题</b>（20×11、每题≥2 概念）→ D1/D3/D9 的"单概念锚"机制在 Math1 <b>结构性不可用</b>（结果目录各有 skipped.json 为证）。这不是实现问题，是数据集硬约束——锚依赖型方法必须去 Eedi/Junyi 验证。</li>
+<li><b>结构约束的收益方向取决于参考 Q 的可靠性</b>：预算在 Math1（可靠专家 Q）有益、在 synthetic（20% 噪声 Q）有害；ECW-Q 在噪声参考上找不出可信边。→ 统一教训：<b>对参考 Q 的约束强度应与参考置信度联动</b>。</li>
+<li><b>排序与校准是两个目标</b>：E3A 的 AUC +0.0058 伴随 ACC −0.0024 和 NLL 全线恶化。→ 选模指标必须同时含 AUC 与 NLL（已写入下一阶段协议）。</li>
+</ol>
+
+<h2 id="s6">六、下一阶段计划</h2>
+<table>
+<tr><th>优先级</th><th class="left">工作</th><th class="left">通过条件</th></tr>
+<tr><td>1</td><td class="left"><b>D2</b>：learned_no_prior 归因 + Eedi/Junyi 三种子正式对照</td><td class="left">三种子 ACC/AUC 配对同向；Q 增删边可解释</td></tr>
+<tr><td>2</td><td class="left">TRQ：random 版 λ/δ 网格 + exp/mask 路径归因</td><td class="left">至少不差于固定软 Q 且路径归因清楚</td></tr>
+<tr><td>3</td><td class="left">E3A：logit 空间锚定 + n0 按验证 NLL + Eedi/Junyi k-shot</td><td class="left">低证据端 AUC 与 NLL 同时不劣</td></tr>
+<tr><td>4</td><td class="left">D5：对称/非对称对照 → 结构 CL</td><td class="left">已知 f/n 下边级 precision/recall 提升</td></tr>
+<tr><td>5</td><td class="left">定向合成数据集（偏科群体 / 干净锚）</td><td class="left">支撑 D1/D3/SACA 的机制级验证</td></tr>
+<tr><td>止损</td><td class="left">ECW-Q 独立路线</td><td class="left">已按预设门槛止损</td></tr>
+</table>
+
+<h2 id="s7">附录：结果目录与复现</h2>
+<ul>
+<li>本轮结果：<code>Q_GNCDM/results/wqcl_ten_screen_v1/&lt;点&gt;/&lt;数据集&gt;/&lt;条件&gt;/</code>（metrics.json / train_log.csv / best_model.pt / mech_check.json；各点附 code_snapshot/）</li>
+<li>本轮分析：<code>Q_GNCDM/docs/experiments/wqcl_ten_screen_v1十个创新点的结果.md</code></li>
+<li>设计文档：<code>Q_GNCDM/docs/plans/wqcl_ten_innovations_20261108.md</code>（十个方向完整设计）</li>
+</ul>
+<pre>PY=.venv-contrastive/Scripts/python.exe
+# D2 筛查复现（P0 初始化）
+$PY -m Q_GNCDM.experiments.run_wqcl_screen --point d2_item_struct --dataset math1 --epochs 40 --q-init-high 0.95 --q-init-low 0.05
+# k-shot 分证据量评估
+$PY -m Q_GNCDM.experiments.evaluate_wqcl_evidence_strata --screen-dir Q_GNCDM/results/wqcl_ten_screen_v1/p10_e3a/math1 --point p10_e3a --ks 2 5 10</pre>
+
+<p class="small">注：本报告全部数字来自单种子阶段 1 筛查（wqcl_ten_screen_v1），量级 ±0.01 内，用于方向判断与机制验证；正式收益结论以阶段 2（三种子配对、五数据集）为准。历史主线结果（A0/A1 五数据集、test_sim_con 96 条件）见 Q_GNCDM/README.md 与 docs/experiments/ 各记录。</p>
+
+</div>
+</body>
+</html>

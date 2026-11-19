@@ -1,0 +1,70 @@
+{
+  "experiment_id": "eedi_task34__resplit4242__fixed_q__baseline",
+  "baseline": "resplit4242 fixed binary Q, no auxiliary loss",
+  "single_change": "No auxiliary loss",
+  "selection_metric": "validation AUC within each training seed; 0.95/0.05 fixed before this split; test only reports",
+  "data_source_sha256": {
+    "train.csv": "1a5679aebc7de5e83fb786e29551518fdca44f81f2224a46095cf4b3f20e0ac5",
+    "valid.csv": "be9b60ce1b3ac2f95738284b322b9b9878f54fe7d7a1aa3aaab281d02e75624c",
+    "test.csv": "f24679ea9e11624d2d845c3d4804c8894be1389d4038b0f7af3326dcc675bcec",
+    "Q_matrix.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb",
+    "Q_true.npy": "a76227d35376799959304a6a253458882537f007c96e913845241d57c5c656fb",
+    "manifest.json": "3f9fc5e6f7e25a615ca09df9a8e1bd017eee43299d2876021d7376c3d71c1e01"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_test_sim_con.py": "c3785a8f87b0efb103147f13fc86a5432789886037a70948190e9914f99e493f",
+    "Q_GNCDM\\experiments\\run_test_sim_con_resplit.py": "577719f4692bd1ac7da634b4b239344dbe757e61e77e7c0434d5eba9d93263f8",
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5"
+  },
+  "split": {
+    "split_id": "resplit4242",
+    "algorithm": "For each student, seeded random permutation of all prepared rows; floor(80%) train, floor(10%) valid, remainder test; order restored within each part.",
+    "split_seed": 4242,
+    "split_lengths": [
+      1104293,
+      136111,
+      142323
+    ],
+    "row_sha256": [
+      "419906b5e89621ff3df1177736c41ba8510434ba1b16198eb0f1a27583759425",
+      "93feab1f76d557ff2d7084293673e006d8e974809f02578418ce4fe2f9c36fbb",
+      "c23eaa430fb528371625e6db9c774d93144e67f0ff037a8346de0a020fc94e55"
+    ],
+    "leakage_check": "passed"
+  },
+  "args": {
+    "dataset": "eedi_task34",
+    "experiment_id": "eedi_task34__resplit4242__fixed_q__baseline",
+    "q_mode": "fixed",
+    "method": "baseline",
+    "lambda_aux": 0.0,
+    "view_rate": 0.1,
+    "evidence_c": 2.0,
+    "temperature": 0.2,
+    "epochs": 60,
+    "patience": 12,
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "embedding_dim": 32,
+    "alpha": 0.8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1,
+    "scratch": false,
+    "split_id": "resplit4242"
+  }
+}

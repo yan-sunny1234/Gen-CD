@@ -1,0 +1,22 @@
+{
+  "dataset": "eedi_task34",
+  "mode": "C0",
+  "mode_label": "fixed-q-simple-contrastive",
+  "seed": 2028,
+  "best_epoch": 30,
+  "epochs_run": 30,
+  "seconds": 84.08281349996105,
+  "valid_auc": 0.7629221696576838,
+  "valid_acc": 0.7044544526158797,
+  "valid_rmse": 0.4413978084180522,
+  "valid_brier": 0.1948320252762595,
+  "valid_nll": 0.5711460765343815,
+  "test_auc": 0.7636719896042415,
+  "test_acc": 0.7042230962253742,
+  "test_rmse": 0.44124135249820734,
+  "test_brier": 0.19469393115444728,
+  "test_nll": 0.5706905981652289,
+  "theta_std_mean": 0.14609277248382568,
+  "q_f1_vs_reference": 1.0,
+  "mean_actual_flip_fraction": 0.10001929678140399
+}

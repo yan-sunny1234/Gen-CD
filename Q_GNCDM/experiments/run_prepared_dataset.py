@@ -44,6 +44,21 @@ def load_rows(path: Path) -> np.ndarray:
 
 def load_data(folder: Path) -> dict:
     folder = Path(folder).resolve()
+    if folder.name == "math1" and (folder / "math1_Q_matrix.npy").is_file():
+        legacy_data = core.load_data(argparse.Namespace(
+            dataset="math1", data_dir=str(folder)
+        ))
+        source_hashes = {
+            Path(name).name: digest
+            for name, digest in legacy_data["source_sha256"].items()
+        }
+        legacy_data["source_sha256"] = source_hashes
+        legacy_data["preparation"] = {
+            "dataset": "math1",
+            "source": "original Math1 prepared split and expert Q",
+            "files_sha256": source_hashes,
+        }
+        return legacy_data
     paths = [folder / f"{part}.csv" for part in ("train", "valid", "test")]
     q_path = folder / "Q_matrix.npy"
     manifest_path = folder / "manifest.json"
@@ -107,6 +122,7 @@ def parse_args(argv=None):
     parser.add_argument("--dataset", required=True, help="Folder name under Q_GNCDM/data")
     parser.add_argument("--data-dir", type=Path, help="Override the prepared dataset folder")
     parser.add_argument("--experiment-id", help="Unique ID under Q_GNCDM/results")
+    parser.add_argument("--result-group", help="Optional dataset-level result directory")
     parser.add_argument("--check-only", action="store_true", help="Validate data and one forward pass; write no files")
     parser.add_argument("--scratch-run", action="store_true", help="Write a trial run under ignored Q_GNCDM/scratch")
     parser.add_argument("--modes", nargs="+", choices=list(core.MODES), default=["A1", "S1"])
@@ -137,6 +153,8 @@ def parse_args(argv=None):
         parser.error("--check-only and --scratch-run cannot be combined")
     if args.experiment_id and not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.experiment_id):
         parser.error("experiment-id must be a simple unique folder name")
+    if args.result_group and not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", args.result_group):
+        parser.error("result-group must be a simple directory name")
     if len(args.modes) != len(set(args.modes)) or len(args.modes) > 2:
         parser.error("Use one mode or one baseline-treatment pair per experiment ID")
     if len(args.modes) == 2 and set(args.modes) not in ({"A0", "A1"}, {"A1", "S1"}):
@@ -170,29 +188,40 @@ def verify_results(data: dict, args, results: list[dict], destination: Path,
         )
         model = core.build_model(data, args, mode, seed)
         model.load_state_dict(checkpoint["model_state_dict"])
-        scores, theta, probabilities = core.evaluate(
+        scores, _, _ = core.evaluate(
             model, data["train"], data["rows"][2]
         )
-        with np.load(run / "test_predictions.npz") as saved:
-            np.testing.assert_array_equal(saved["rows"], data["rows"][2])
-            np.testing.assert_allclose(
-                saved["probabilities"], probabilities, atol=1e-7, rtol=0
-            )
-        np.testing.assert_allclose(theta, np.load(run / "theta.npy"), atol=1e-7, rtol=0)
+        with (run / "metrics.json").open("r", encoding="utf-8") as handle:
+            saved_metrics = json.load(handle)
         for metric, value in scores.items():
             if value is not None and not np.isclose(
                 value, result[f"test_{metric}"], atol=1e-10, rtol=0
             ):
                 raise ValueError(f"Replayed {metric} differs for {mode}, seed {seed}")
-        if mode == "A0":
-            np.testing.assert_array_equal(np.load(run / "Q_soft.npy"), data["q"])
+            if value is not None and not np.isclose(
+                value, saved_metrics[f"test_{metric}"], atol=1e-10, rtol=0
+            ):
+                raise ValueError(f"Saved {metric} differs for {mode}, seed {seed}")
+        if mode in ("A0", "C0"):
+            np.testing.assert_array_equal(
+                model.get_q_soft().detach().cpu().numpy(), data["q"]
+            )
     return {
         "status": "passed",
         "checkpoints_replayed": len(results),
         "source_and_code_hashes": "passed",
-        "test_predictions_and_metrics": "passed",
+        "checkpoint_replay_and_test_metrics": "passed",
         "split_disjointness": "passed at load time",
     }
+
+
+def discard_intermediates(run: Path) -> None:
+    """Keep the checkpoint and metrics; the root manifest carries the config."""
+    for filename in (
+        "config.json", "train_log.csv", "theta.npy", "Q_soft.npy", "Q_hard.npy",
+        "test_predictions.npz",
+    ):
+        (run / filename).unlink()
 
 
 def main(argv=None):
@@ -213,7 +242,10 @@ def main(argv=None):
 
     destination = ROOT / "Q_GNCDM" / (
         "scratch" if args.scratch_run else "results"
-    ) / args.experiment_id
+    )
+    if args.result_group:
+        destination = destination / args.result_group
+    destination = destination / args.experiment_id
     destination.mkdir(parents=True, exist_ok=False)
     import scipy
     import sklearn
@@ -226,7 +258,7 @@ def main(argv=None):
         Path(legacy.__file__),
     ]
     if set(args.modes) == {"A0", "A1"}:
-        baseline, single_change = "A0 fixed expert Q", "A1 learns weak Q"
+        baseline, single_change = "A0 fixed reference Q", "A1 learns weak Q"
     elif set(args.modes) == {"A1", "S1"}:
         baseline, single_change = "A1 weak Q", "S1 adds response-flip InfoNCE"
     else:
@@ -235,11 +267,15 @@ def main(argv=None):
         str(path.relative_to(ROOT)): sha256(path) for path in source_files
     }
     legacy.write_json(destination / "manifest.json", {
-        "experiment_id": args.experiment_id,
+        "experiment_id": (
+            f"{args.result_group}/{args.experiment_id}"
+            if args.result_group else args.experiment_id
+        ),
         "dataset": args.dataset,
         "baseline": baseline,
         "single_change": single_change,
         "selection_metric": "validation AUC (validation NLL fallback)",
+        "artifact_policy": "Formal runs keep root summaries plus per-seed metrics.json and best_model.pt; scratch runs keep debug intermediates.",
         "python": sys.version,
         "python_executable": sys.executable,
         "platform": platform.platform(),
@@ -262,6 +298,8 @@ def main(argv=None):
             result = core.train_one(data, args, mode, seed, destination / f"seed_{seed}" / mode)
             results.append(result)
             core.summarize(results, destination)
+            if not args.scratch_run:
+                discard_intermediates(destination / f"seed_{seed}" / mode)
     legacy.write_json(destination / "verification.json", verify_results(
         data, args, results, destination, code_hashes
     ))

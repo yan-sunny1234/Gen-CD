@@ -1,0 +1,166 @@
+{
+  "experiment_id": "simple_contrastive_math2/lambda_0p005",
+  "dataset": "math2",
+  "baseline": "A0 fixed reference Q, no contrastive loss",
+  "single_change": "C0 adds response-flip InfoNCE; Q remains fixed",
+  "selection_metric": "validation AUC (validation NLL fallback)",
+  "artifact_policy": "Per condition: manifest, summary, verification, per-seed metrics and checkpoint; candidate summary includes paired A0 rows copied from baseline_A0.",
+  "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "command": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\experiments\\select_and_run_simple_contrastive.py --dataset math2",
+  "train_shape": [
+    3911,
+    16
+  ],
+  "split_lengths": [
+    43021,
+    7822,
+    11733
+  ],
+  "preparation": {
+    "dataset": "math2",
+    "source": {
+      "archive": "E:\\Desktop\\数据集\\math2015.rar",
+      "url": "http://staff.ustc.edu.cn/~qiliuql/data/math2015.rar",
+      "archive_sha256": "61ae2410a734011ea2c5f63b37a91b64ecb6c102376037d06997f475af8d85fb",
+      "member_sha256": {
+        "math2015/Math2/data.txt": "668e53d5a09ddef418235e5a27743551013b7d9121f499f24deaad7903605b47",
+        "math2015/Math2/q.txt": "01eccb897726a192d677d1d5ffe98b47fcf0176d09bdd971117b3ca957f756cf",
+        "math2015/Math2/problemdesc.txt": "b2b9ee7c62d7a0d62bc3c2db846949480172cd8cf099cc5858a94584bfcc2ea1"
+      },
+      "terms_member_sha256": "ee4b4dfdced278f2035d19ef96c78dcfc879096b1ff07a591aed84b094b7a588",
+      "citation": "Runze Wu et al., Cognitive Modelling for Predicting Examinee Performance, IJCAI 2015.",
+      "terms_text": "By using the Math dataset, you agree to the following terms of use:\r\n\r\n1. Data is for research purposes, not commercial purposes.\r\n\r\n2. You will not make any attempts to de-anonymize the data.\r\n\r\n3. Please include the following reference in your publication:\r\n   Runze Wu, Qi Liu, Yuping Liu, Enhong Chen, Yu Su, Zhigang Chen and Guoping Hu. \"Cognitive Modelling for Predicting Examinee Performance.\" In Proceedings of the Twenty-Fourth international joint conference on Artificial Intelligence. AAAI Press, 2015.\r\nor you might also cite our URL in the text of your paper:\r\n   For exploratory analysis, I used the Math dataset, available at http://staff.ustc.edu.cn/~qiliuql/data/math2015.rar (Runze, Qi et al., 2015)."
+    },
+    "preparation": {
+      "response_source": "normalized Math2/data.txt",
+      "selected_original_question_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "excluded_original_question_numbers": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "exclusion_reason": "Subjective questions have fractional scores; no thresholding applied.",
+      "student_ids": "Original row order, zero-based.",
+      "item_ids": "Selected objective question order, zero-based.",
+      "q_source": "Expert Math2/q.txt, selected question rows.",
+      "q_true": "Exact duplicate of Q_matrix.npy for existing runner diagnostics."
+    },
+    "split": {
+      "method": "Independent seeded question permutation per student.",
+      "seed": 2026,
+      "target_ratios": {
+        "train": 0.7,
+        "valid": 0.1,
+        "test": 0.2
+      },
+      "per_student_counts": {
+        "train": 11,
+        "valid": 2,
+        "test": 3
+      },
+      "counts": {
+        "train": 43021,
+        "valid": 7822,
+        "test": 11733
+      },
+      "observed_ratios": {
+        "train": 0.6875,
+        "valid": 0.125,
+        "test": 0.1875
+      }
+    },
+    "dimensions": {
+      "students": 3911,
+      "items": 16,
+      "concepts": 16,
+      "interactions": 62576
+    },
+    "files_sha256": {
+      "train.csv": "f517e08c59202a501c3008a5767acb0da4094729b81c297d9df358607e7459cc",
+      "valid.csv": "c360e4af513eaf829d93e1f26472960057ffc63856884af795e961018a4a762a",
+      "test.csv": "31ac2a70bfe7ee8dbee50a3e31800852097872c940690716a63580e968d24f07",
+      "Q_matrix.npy": "d60f7344c2a69b1920d1bd0806567b90743d02a60ae32b3e930f1ee7ffb2eeb4",
+      "Q_true.npy": "d60f7344c2a69b1920d1bd0806567b90743d02a60ae32b3e930f1ee7ffb2eeb4"
+    }
+  },
+  "source_sha256": {
+    "train.csv": "f517e08c59202a501c3008a5767acb0da4094729b81c297d9df358607e7459cc",
+    "valid.csv": "c360e4af513eaf829d93e1f26472960057ffc63856884af795e961018a4a762a",
+    "test.csv": "31ac2a70bfe7ee8dbee50a3e31800852097872c940690716a63580e968d24f07",
+    "Q_matrix.npy": "d60f7344c2a69b1920d1bd0806567b90743d02a60ae32b3e930f1ee7ffb2eeb4",
+    "Q_true.npy": "d60f7344c2a69b1920d1bd0806567b90743d02a60ae32b3e930f1ee7ffb2eeb4",
+    "manifest.json": "1bcac37dd1dfb672759e95671dabee9c7fd14973fe046f304f5b4bafc6584662"
+  },
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_prepared_dataset.py": "663b5223928b693bd0953f0d90b0a4be41ee112db325037885e2c62ce9031dd8",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "f3eee63d252f3a89a2e81ce8a41c2cd70a8f70821eb9af97a112adb46e4a4a63",
+    "Q_GNCDM\\simple_contrastive.py": "b47057f2e7c278d069f704816790e1fbea0823ec2c715d826bedb3d5c9f4b891",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6"
+  },
+  "args": {
+    "dataset": "math2",
+    "data_dir": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math2",
+    "experiment_id": "lambda_0p005",
+    "result_group": "simple_contrastive_math2",
+    "check_only": false,
+    "scratch_run": false,
+    "modes": [
+      "C0"
+    ],
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "positive_noise_rate": 0.1,
+    "temperature": 0.2,
+    "lambda_cl": 0.005,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.0,
+    "lambda_coverage": 0.0,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu",
+    "threads": 1
+  },
+  "modes": {
+    "C0": {
+      "label": "fixed-q-simple-contrastive",
+      "learn_q": false,
+      "contrastive": true
+    }
+  },
+  "orchestrator_sha256": "4f059ceda66dfaf77e553c6c95482a8bce383649ceaf5e3c47574eb229286ff9"
+}
