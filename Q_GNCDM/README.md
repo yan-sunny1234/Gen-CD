@@ -1,5 +1,16 @@
 # Q_GNCDM 实验导航
 
+2026-11-24 [无 Support/Query、仅学生掌握度 InfoNCE](docs/experiments/student_cl_no_support_query_M/README.md)：按作答记录训练，题目输入保持干净、不接收直接对比梯度；独立于交互表示实验，正在运行。
+
+2026-11-24 [无 Support/Query 的双输入交互对比实验](docs/experiments/student_cl_no_support_query/README.md)：按作答记录训练，学生与题目输入同时连续加噪，对原预测路径的交互表示做 InfoNCE。正在运行；与旧 student_cl 协议不同，结果不混算。
+
+学生对比学习跨数据集报告统一入口：[student_cl 报告索引](docs/experiments/student_cl/README.md)。
+
+2026-11-23 [同学生对比学习噪声敏感性实验](docs/experiments/student_cl/math1_noise_R2-R5_20261123.md)：Math1、两种Q设置、R2–R5、三种子共24次训练；极端负噪声产生明确的距离与梯度响应，但ACC方向不一致，尚无稳定收益。主表展示验证ACC选出的单次运行，另保留全部种子、配对统计与11张曲线图。
+
+2026-11-23 [同学生连续扰动 InfoNCE 受控实验](docs/experiments/student_cl/math1_control_R0-R2_20261123.md)：Math1、三种子、固定 Q/Weak-Q 共18次训练；零系数与参考训练精确一致，对比梯度及参数更新非零，但未见稳定预测收益。全部按验证 ACC 选模，勿与旧验证 AUC 选模结果直接相减。
+
+
 补充 [Math1 固定二值 Q、无 Weak-Q／CL 的 α 消融](docs/experiments/alpha_endpoints_fixedq_math1_20261110.md)：α=0.8 比 α=1 的 AUC 高 0.002069、ACC 高 0.002237，三个种子同向；隐式分支在此设置有增量，不能由 Weak-Q 下的近零增量推断其普遍无效。
 
 最新 [Math1 α=0／0.8／1 分支消融](docs/experiments/alpha_endpoints_math1_20261110.md)：Weak-Q、无 CL、三种子同预算下，仅隐式分支较弱；仅显式与原 0.8 融合接近。最终指标见[对照表](results/alpha_endpoints_math1_20261110/comparison.csv)，未保存中间模型或逐轮日志。

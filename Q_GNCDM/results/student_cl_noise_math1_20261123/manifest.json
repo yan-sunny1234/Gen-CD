@@ -1,0 +1,107 @@
+{
+  "args": {
+    "experiment_id": "student_cl_control_math1_20261123",
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "lambda_cl": 0.1,
+    "positive_noise_ratio": 0.1,
+    "positive_noise_scale": 0.01,
+    "negative_noise_ratio": 0.5,
+    "negative_noise_scale": 0.1,
+    "noise_distribution": "uniform",
+    "contrastive_seed": 1123,
+    "temperature": 0.2,
+    "dataset": "math1",
+    "data_dir": "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1",
+    "alpha": 0.8,
+    "embedding_dim": 32,
+    "epochs": 30,
+    "patience": 8,
+    "batch_students": 128,
+    "query_fraction": 0.25,
+    "lr": 0.001,
+    "q_lr": 0.005,
+    "lambda_q": 0.01,
+    "lambda_coverage": 0.01,
+    "q_init_high": 0.55,
+    "q_init_low": 0.45,
+    "device": "cpu"
+  },
+  "git_head": "89290e14293fe00b1e4eb55ba87ed068c5eccfdc",
+  "git_status_start": "?? Q_GNCDM/experiments/controlled_student_cl.py\n?? Q_GNCDM/experiments/reference_student_cl_acc.py\n?? Q_GNCDM/experiments/run_controlled_student_cl.py\n",
+  "code_sha256": {
+    "Q_GNCDM\\experiments\\run_controlled_student_cl.py": "9447f3fc2e79391b043148ae28717bee2f9f6a53dbe44352e5dddca3b6212a46",
+    "Q_GNCDM\\experiments\\reference_student_cl_acc.py": "a974a5dbb0e36daf5ed49031be1838d69200e070f935d8f8f9dc31c0d9fa3dfc",
+    "Q_GNCDM\\experiments\\controlled_student_cl.py": "4329530390f079ae00f6fa0d00af659e7e7be0f09134f8bc642b5a8caa0cb041",
+    "Q_GNCDM\\experiments\\run_simple_contrastive.py": "196cbac42d9e7664eb4c24a4328bc852dca9265d7a88149adda0be924564a023",
+    "Q_GNCDM\\models\\weak_q_gncdm.py": "5970f43820db2736bcf5f4e48039af50bf4203a5f391baa2046b8046c21517f5",
+    "Q_GNCDM\\simple_contrastive.py": "30f0126846ab0e0d8802306ee183374a17730ed63f5bdd3ff6d76949b5252d97",
+    "Q_GNCDM\\experiments\\run_weak_q_synthetic.py": "266d36d84cf1095189700a0b1f524f678accfd79feb94402ef6562f004f6b9b6"
+  },
+  "data_sha256": {
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1\\math1_train_0.8_0.2.csv": "3130c682a8b403c0976b4ada328305c97ebaecbc5d59b25908f65ea5ee9b4b6b",
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1\\math1_valid_0.8_0.2.csv": "db460ecf4d7a98bcf652204a68f81155133fee8e39ddbacc95f4d4bb5837dfd1",
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1\\math1_test_0.8_0.2.csv": "f881d3b8facfbe6f55f2cae37f7e4d85fcb0b901e3b9968b9e9fd1c4b03a2b68",
+    "E:\\Desktop\\Gen-CD\\Q_GNCDM\\data\\math1\\math1_Q_matrix.npy": "c8274db8baed5de31ee2911643a984a5cbcde038926b1eac2c08cdb9b0ca55ab"
+  },
+  "split_lengths": [
+    58926,
+    8418,
+    16836
+  ],
+  "command": "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe -m Q_GNCDM.experiments.run_student_cl_noise_sensitivity",
+  "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.3",
+  "selection": "maximum validation ACC; earliest tie; unchanged patience 8",
+  "baseline": "R0: original clean training loop, only ACC selector and artifact reduction adapted",
+  "single_change_R1_R2": "lambda_cl 0 versus 0.1",
+  "noise": "Bernoulli element selection, uniform additive noise, clip [-1,1]; student support only",
+  "loss": "-log softmax([cos(m,mp),cos(m,mn)] / temperature)[0]; one same-student negative",
+  "margin_activation": null,
+  "margin_note": "not applicable to InfoNCE",
+  "gradient_sampling": "every R2 training batch; autograd.grad does not accumulate into .grad",
+  "matrix_policy": "all learned weights and biases in per-run weights.npz; full state in checkpoint",
+  "experiment_id": "student_cl_noise_math1_20261123",
+  "parent_experiment": "Q_GNCDM\\results\\student_cl_control_math1_20261123",
+  "noise_configs": {
+    "R2": [
+      0.1,
+      0.01,
+      0.5,
+      0.1
+    ],
+    "R3": [
+      0.01,
+      0.001,
+      0.5,
+      0.1
+    ],
+    "R4": [
+      0.1,
+      0.01,
+      0.7,
+      0.5
+    ],
+    "R5": [
+      0.01,
+      0.001,
+      0.7,
+      0.5
+    ]
+  },
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "new_script_sha256": "b4c2c3850c4f49b26f60099c8d593128393ec8de80dcb3205d04fb27507f440f",
+  "selection_between_seeds": "highest validation ACC, ties lowest seed; report both test metrics from same run",
+  "changes": "only positive/negative ratios and scales; observations do not affect training",
+  "loss_components": "positive_energy + joint_log_partition = InfoNCE; no independent negative loss or margin",
+  "gradient_activation": "fraction of negative-view row gradients with L2 norm >0 and >1e-12",
+  "epoch_diagnostics": "arithmetic batch means; probe uses fixed support/students/noise throughout epochs"
+}

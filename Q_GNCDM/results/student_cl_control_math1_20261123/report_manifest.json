@@ -1,0 +1,10 @@
+{
+  "script_sha256": "8e8134afa4f824f077c299456c4dc5b833debabc254564dffc7ee727ed472450",
+  "report_sha256": "22df8492fbd7e4b923aab80fa2c7fffdc74f5f511b44db0f0ee7d5c7654e02f8",
+  "command": [
+    "E:\\Desktop\\Gen-CD\\.venv-contrastive\\Scripts\\python.exe",
+    "-m",
+    "Q_GNCDM.experiments.summarize_controlled_student_cl"
+  ],
+  "checkpoints_replayed": 18
+}

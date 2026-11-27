@@ -1,0 +1,207 @@
+{
+  "A0": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 9.640915690203533e-05,
+      "cl_shared_grad_norm": 3.3391265673790873e-06,
+      "cl_to_original_grad_ratio": 0.034634952474193806,
+      "weighted_cl_to_original_grad_ratio": 0.0034634952474193806
+    },
+    "per_layer": {
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 2.5706365704536438e-05,
+        "cl_grad_norm": 1.6297594811476301e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 8.335213351529092e-06,
+        "cl_grad_norm": 6.798621257075865e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 7.346252095885575e-05,
+        "cl_grad_norm": 2.0445240807021037e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 5.628223516396247e-05,
+        "cl_grad_norm": 1.962487885975861e-06,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 2.0323215110806814e-08,
+      "an_mse": 8.680447535880376e-06,
+      "ap_cos_distance": 2.8405338525772095e-08,
+      "an_cos_distance": 1.116795465350151e-05,
+      "negative_softmax_probability": 0.49998608231544495,
+      "negative_not_farther_fraction": 0.0546875,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8093687295913696,
+    "loss_cl": 0.6931192278862,
+    "loss_total": 0.8786806464195251,
+    "single_step_parameter_changes": {
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.6303306152106668e-07,
+        "update_difference_l2": 0.00013372021193675446,
+        "baseline_update_l2": 0.014552149345593306,
+        "cl_update_l2": 0.014550364983667569
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 6.802175822047813e-08,
+        "update_difference_l2": 2.177277760851944e-05,
+        "baseline_update_l2": 0.003270498319856233,
+        "cl_update_l2": 0.0032767447560759647
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 2.0450241566562426e-07,
+        "update_difference_l2": 3.369963375417721e-05,
+        "baseline_update_l2": 0.010900957628663221,
+        "cl_update_l2": 0.010896240753115297
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 1.9630923927173599e-07,
+        "update_difference_l2": 2.457562461863554e-07,
+        "baseline_update_l2": 0.0033095925226957028,
+        "cl_update_l2": 0.003309677225696205
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed"
+  },
+  "A1": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 0.0004752397207768994,
+      "cl_shared_grad_norm": 4.622925671037279e-07,
+      "cl_to_original_grad_ratio": 0.0009727565834522289,
+      "weighted_cl_to_original_grad_ratio": 9.727565834522291e-05
+    },
+    "per_layer": {
+      "q_logits": {
+        "original_grad_norm": 0.0004409003013279289,
+        "cl_grad_norm": 3.357801290349016e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 4.995694325771183e-05,
+        "cl_grad_norm": 1.138998086958054e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 2.8488526368164457e-05,
+        "cl_grad_norm": 2.0186957883083778e-08,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 0.000137491209898144,
+        "cl_grad_norm": 1.1761324714143484e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 9.61695914156735e-05,
+        "cl_grad_norm": 2.7157423687640403e-07,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.8612105634474574e-08,
+      "an_mse": 8.831929335428867e-06,
+      "ap_cos_distance": 3.725290298461914e-09,
+      "an_cos_distance": 1.695007085800171e-07,
+      "negative_softmax_probability": 0.4999998211860657,
+      "negative_not_farther_fraction": 0.25,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8112648129463196,
+    "loss_cl": 0.693146824836731,
+    "loss_total": 0.8805794715881348,
+    "single_step_parameter_changes": {
+      "q_logits": {
+        "gradient_difference_l2": 3.3581777193255015e-08,
+        "update_difference_l2": 1.6704427673349474e-05,
+        "baseline_update_l2": 0.073983808229415,
+        "cl_update_l2": 0.07398344310537587
+      },
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.1373343899442746e-08,
+        "update_difference_l2": 4.4953611178137e-06,
+        "baseline_update_l2": 0.014624214588827865,
+        "cl_update_l2": 0.014624108889216504
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 2.0069410874984542e-09,
+        "update_difference_l2": 0.0,
+        "baseline_update_l2": 0.003312148769221308,
+        "cl_update_l2": 0.003312148769221308
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 1.1752629127548806e-08,
+        "update_difference_l2": 7.27342397564787e-08,
+        "baseline_update_l2": 0.010962510377313864,
+        "cl_update_l2": 0.010962507140209733
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 2.7158511262225063e-08,
+        "update_difference_l2": 1.862645149230957e-09,
+        "baseline_update_l2": 0.0033140196918637413,
+        "cl_update_l2": 0.0033140191304159776
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed"
+  }
+}

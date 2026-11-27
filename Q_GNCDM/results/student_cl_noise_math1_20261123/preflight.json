@@ -1,0 +1,1134 @@
+{
+  "A0_R2": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 9.640915690203533e-05,
+      "cl_shared_grad_norm": 3.3391265673790873e-06,
+      "cl_to_original_grad_ratio": 0.034634952474193806,
+      "weighted_cl_to_original_grad_ratio": 0.0034634952474193806
+    },
+    "per_layer": {
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 2.5706365704536438e-05,
+        "cl_grad_norm": 1.6297594811476301e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 8.335213351529092e-06,
+        "cl_grad_norm": 6.798621257075865e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 7.346252095885575e-05,
+        "cl_grad_norm": 2.0445240807021037e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 5.628223516396247e-05,
+        "cl_grad_norm": 1.962487885975861e-06,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 2.0323215110806814e-08,
+      "an_mse": 8.680447535880376e-06,
+      "ap_cos_distance": 2.8405338525772095e-08,
+      "an_cos_distance": 1.116795465350151e-05,
+      "negative_softmax_probability": 0.49998608231544495,
+      "negative_not_farther_fraction": 0.0546875,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8093687295913696,
+    "loss_cl": 0.6931192278862,
+    "loss_total": 0.8786806464195251,
+    "single_step_parameter_changes": {
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.6303306152106668e-07,
+        "update_difference_l2": 0.00013372021193675446,
+        "baseline_update_l2": 0.014552149345593306,
+        "cl_update_l2": 0.014550364983667569
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 6.802175822047813e-08,
+        "update_difference_l2": 2.177277760851944e-05,
+        "baseline_update_l2": 0.003270498319856233,
+        "cl_update_l2": 0.0032767447560759647
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 2.0450241566562426e-07,
+        "update_difference_l2": 3.369963375417721e-05,
+        "baseline_update_l2": 0.010900957628663221,
+        "cl_update_l2": 0.010896240753115297
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 1.9630923927173599e-07,
+        "update_difference_l2": 2.457562461863554e-07,
+        "baseline_update_l2": 0.0033095925226957028,
+        "cl_update_l2": 0.003309677225696205
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.845795161159458e-08,
+      "an_mse": 8.595335202699061e-06,
+      "ap_cos_distance": 6.51925802230835e-09,
+      "an_cos_distance": 1.0605435818433762e-05,
+      "negative_softmax_probability": 0.49998676776885986,
+      "negative_not_farther_fraction": 0.015625,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.69312047958374,
+      "negative_relative_penalty": 0.6931207180023193,
+      "positive_view_grad_norm_mean": 1.2731853492641255e-06,
+      "negative_view_grad_norm_mean": 4.821562137559818e-05,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 4.956485612872191e-09,
+      "negative_shared_partial_grad_norm": 3.017491648288968e-06,
+      "positive_selected_fraction": 0.09609375,
+      "positive_changed_fraction": 0.0515625,
+      "positive_clipped_fraction_selected": 0.4634146341463415,
+      "positive_input_mae_observed": 0.00024155285791493952,
+      "positive_input_mae_all": 0.00012077642895746976,
+      "positive_input_max_change": 0.009784042835235596,
+      "positive_input_mse_observed": 1.508793275206699e-06,
+      "positive_clipped_fraction_observed": 0.04453125,
+      "positive_input_mae_changed": 0.004684661515057087,
+      "positive_unchanged_student_fraction": 0.609375,
+      "negative_selected_fraction": 0.5203125,
+      "negative_changed_fraction": 0.25625,
+      "negative_clipped_fraction_selected": 0.5075075075075075,
+      "negative_input_mae_observed": 0.012292473576962948,
+      "negative_input_mae_all": 0.006146236788481474,
+      "negative_input_max_change": 0.09916102886199951,
+      "negative_input_mse_observed": 0.0008106253808364272,
+      "negative_clipped_fraction_observed": 0.2640625,
+      "negative_input_mae_changed": 0.04797063022851944,
+      "negative_unchanged_student_fraction": 0.015625
+    }
+  },
+  "A0_R3": {
+    "positive": {
+      "selected_fraction": 0.01045,
+      "changed_fraction": 0.005025,
+      "clipped_fraction_selected": 0.5179425837320574,
+      "input_mae_observed": 2.512869286874775e-06,
+      "input_mae_all": 2.010295474974555e-06,
+      "input_max_change": 0.0009962916374206543
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 9.640915690203533e-05,
+      "cl_shared_grad_norm": 3.346321976754896e-06,
+      "cl_to_original_grad_ratio": 0.03470958656090323,
+      "weighted_cl_to_original_grad_ratio": 0.003470958656090323
+    },
+    "per_layer": {
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 2.5706365704536438e-05,
+        "cl_grad_norm": 1.6328521041941713e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 8.335213351529092e-06,
+        "cl_grad_norm": 6.815460551479191e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 7.346252095885575e-05,
+        "cl_grad_norm": 2.0490183487709146e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 5.628223516396247e-05,
+        "cl_grad_norm": 1.9668968889163807e-06,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.5673367118052006e-11,
+      "an_mse": 8.680447535880376e-06,
+      "ap_cos_distance": 6.51925802230835e-09,
+      "an_cos_distance": 1.116795465350151e-05,
+      "negative_softmax_probability": 0.49998605251312256,
+      "negative_not_farther_fraction": 0.0546875,
+      "positive_selected_fraction": 0.009375,
+      "positive_changed_fraction": 0.0046875,
+      "positive_clipped_fraction_selected": 0.5,
+      "positive_input_mae_observed": 2.5224871933460236e-06,
+      "positive_input_mae_all": 1.2612435966730118e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8093687295913696,
+    "loss_cl": 0.6931192278862,
+    "loss_total": 0.8786806464195251,
+    "single_step_parameter_changes": {
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.6329499204423847e-07,
+        "update_difference_l2": 0.00013483588620376267,
+        "baseline_update_l2": 0.014552149345593306,
+        "cl_update_l2": 0.014550364872972798
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 6.815530350144682e-08,
+        "update_difference_l2": 2.180257694951785e-05,
+        "baseline_update_l2": 0.003270498319856233,
+        "cl_update_l2": 0.0032767531168957824
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 2.0488044468975067e-07,
+        "update_difference_l2": 3.379606681067745e-05,
+        "baseline_update_l2": 0.010900957628663221,
+        "cl_update_l2": 0.010896226529488703
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 1.9668862453391299e-07,
+        "update_difference_l2": 2.457562461863554e-07,
+        "baseline_update_l2": 0.0033095925226957028,
+        "cl_update_l2": 0.003309677225696205
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 9.184259255889948e-12,
+      "an_mse": 8.595335202699061e-06,
+      "ap_cos_distance": -1.6763806343078613e-08,
+      "an_cos_distance": 1.0605435818433762e-05,
+      "negative_softmax_probability": 0.4999867081642151,
+      "negative_not_farther_fraction": 0.0078125,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.69312047958374,
+      "negative_relative_penalty": 0.6931206583976746,
+      "positive_view_grad_norm_mean": 1.3217548952402818e-08,
+      "negative_view_grad_norm_mean": 4.821561744273862e-05,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 5.0027291932931955e-09,
+      "negative_shared_partial_grad_norm": 3.0175139570786568e-06,
+      "positive_selected_fraction": 0.00859375,
+      "positive_changed_fraction": 0.00390625,
+      "positive_clipped_fraction_selected": 0.5454545454545454,
+      "positive_input_mae_observed": 2.0769889488292392e-06,
+      "positive_input_mae_all": 1.0384944744146196e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "positive_input_mse_observed": 1.3076010274559735e-09,
+      "positive_clipped_fraction_observed": 0.0046875,
+      "positive_input_mae_changed": 0.0005317091709002852,
+      "positive_unchanged_student_fraction": 0.9609375,
+      "negative_selected_fraction": 0.5203125,
+      "negative_changed_fraction": 0.25625,
+      "negative_clipped_fraction_selected": 0.5075075075075075,
+      "negative_input_mae_observed": 0.012292473576962948,
+      "negative_input_mae_all": 0.006146236788481474,
+      "negative_input_max_change": 0.09916102886199951,
+      "negative_input_mse_observed": 0.0008106253808364272,
+      "negative_clipped_fraction_observed": 0.2640625,
+      "negative_input_mae_changed": 0.04797063022851944,
+      "negative_unchanged_student_fraction": 0.015625
+    }
+  },
+  "A0_R4": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.7017125,
+      "changed_fraction": 0.3529375,
+      "clipped_fraction_selected": 0.4970340417193651,
+      "input_mae_observed": 0.08849677443504333,
+      "input_mae_all": 0.07079741358757019,
+      "input_max_change": 0.4999908208847046
+    },
+    "gradient": {
+      "original_shared_grad_norm": 9.640915690203533e-05,
+      "cl_shared_grad_norm": 0.00012832000692979527,
+      "cl_to_original_grad_ratio": 1.3309939745680555,
+      "weighted_cl_to_original_grad_ratio": 0.13309939745680555
+    },
+    "per_layer": {
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 2.5706365704536438e-05,
+        "cl_grad_norm": 6.010061770211905e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 8.335213351529092e-06,
+        "cl_grad_norm": 2.6615876777213998e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 7.346252095885575e-05,
+        "cl_grad_norm": 7.778372673783451e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 5.628223516396247e-05,
+        "cl_grad_norm": 7.807193469488993e-05,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 2.0323215110806814e-08,
+      "an_mse": 0.0003302808618173003,
+      "ap_cos_distance": 2.8405338525772095e-08,
+      "an_cos_distance": 0.0004205964505672455,
+      "negative_softmax_probability": 0.49947425723075867,
+      "negative_not_farther_fraction": 0.0,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.7171875,
+      "negative_changed_fraction": 0.35703125,
+      "negative_clipped_fraction_selected": 0.5021786492374728,
+      "negative_input_mae_observed": 0.08900170773267746,
+      "negative_input_mae_all": 0.04450085386633873,
+      "negative_input_max_change": 0.49600982666015625
+    },
+    "loss_original": 0.8093687295913696,
+    "loss_cl": 0.6920967102050781,
+    "loss_total": 0.8785784244537354,
+    "single_step_parameter_changes": {
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 6.01007013645505e-06,
+        "update_difference_l2": 0.006584927250774723,
+        "baseline_update_l2": 0.014552149345593306,
+        "cl_update_l2": 0.01448916499148435
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 2.6616119631799428e-06,
+        "update_difference_l2": 9.391752334124872e-05,
+        "baseline_update_l2": 0.003270498319856233,
+        "cl_update_l2": 0.003302116655307766
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 7.778452180347374e-06,
+        "update_difference_l2": 0.006122061829721843,
+        "baseline_update_l2": 0.010900957628663221,
+        "cl_update_l2": 0.010875354115752953
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 7.807222793953044e-06,
+        "update_difference_l2": 5.039774300932362e-06,
+        "baseline_update_l2": 0.0033095925226957028,
+        "cl_update_l2": 0.003310964619699058
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.845795161159458e-08,
+      "an_mse": 0.00031001539900898933,
+      "ap_cos_distance": 6.51925802230835e-09,
+      "an_cos_distance": 0.00038657989352941513,
+      "negative_softmax_probability": 0.4995168149471283,
+      "negative_not_farther_fraction": 0.0,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.692181587219238,
+      "negative_relative_penalty": 0.6921814680099487,
+      "positive_view_grad_norm_mean": 1.2718179206280474e-06,
+      "negative_view_grad_norm_mean": 0.00030031423965682714,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 5.503621313175651e-09,
+      "negative_shared_partial_grad_norm": 0.00011122550332586638,
+      "positive_selected_fraction": 0.09609375,
+      "positive_changed_fraction": 0.0515625,
+      "positive_clipped_fraction_selected": 0.4634146341463415,
+      "positive_input_mae_observed": 0.00024155285791493952,
+      "positive_input_mae_all": 0.00012077642895746976,
+      "positive_input_max_change": 0.009784042835235596,
+      "positive_input_mse_observed": 1.508793275206699e-06,
+      "positive_clipped_fraction_observed": 0.04453125,
+      "positive_input_mae_changed": 0.004684661515057087,
+      "positive_unchanged_student_fraction": 0.609375,
+      "negative_selected_fraction": 0.73828125,
+      "negative_changed_fraction": 0.36015625,
+      "negative_clipped_fraction_selected": 0.5121693121693122,
+      "negative_input_mae_observed": 0.08636343479156494,
+      "negative_input_mae_all": 0.04318171739578247,
+      "negative_input_max_change": 0.49600982666015625,
+      "negative_input_mse_observed": 0.028311382979154587,
+      "negative_clipped_fraction_observed": 0.378125,
+      "negative_input_mae_changed": 0.23979435861110687,
+      "negative_unchanged_student_fraction": 0.0
+    }
+  },
+  "A0_R5": {
+    "positive": {
+      "selected_fraction": 0.01045,
+      "changed_fraction": 0.005025,
+      "clipped_fraction_selected": 0.5179425837320574,
+      "input_mae_observed": 2.512869286874775e-06,
+      "input_mae_all": 2.010295474974555e-06,
+      "input_max_change": 0.0009962916374206543
+    },
+    "negative": {
+      "selected_fraction": 0.7017125,
+      "changed_fraction": 0.3529375,
+      "clipped_fraction_selected": 0.4970340417193651,
+      "input_mae_observed": 0.08849677443504333,
+      "input_mae_all": 0.07079741358757019,
+      "input_max_change": 0.4999908208847046
+    },
+    "gradient": {
+      "original_shared_grad_norm": 9.640915690203533e-05,
+      "cl_shared_grad_norm": 0.00012832633783199153,
+      "cl_to_original_grad_ratio": 1.3310596415897336,
+      "weighted_cl_to_original_grad_ratio": 0.13310596415897336
+    },
+    "per_layer": {
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 2.5706365704536438e-05,
+        "cl_grad_norm": 6.0103142459411174e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 8.335213351529092e-06,
+        "cl_grad_norm": 2.6617270123097114e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 7.346252095885575e-05,
+        "cl_grad_norm": 7.778779399814084e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 5.628223516396247e-05,
+        "cl_grad_norm": 7.80758709879592e-05,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.5673367118052006e-11,
+      "an_mse": 0.0003302808618173003,
+      "ap_cos_distance": 6.51925802230835e-09,
+      "an_cos_distance": 0.0004205964505672455,
+      "negative_softmax_probability": 0.49947425723075867,
+      "negative_not_farther_fraction": 0.0,
+      "positive_selected_fraction": 0.009375,
+      "positive_changed_fraction": 0.0046875,
+      "positive_clipped_fraction_selected": 0.5,
+      "positive_input_mae_observed": 2.5224871933460236e-06,
+      "positive_input_mae_all": 1.2612435966730118e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "negative_selected_fraction": 0.7171875,
+      "negative_changed_fraction": 0.35703125,
+      "negative_clipped_fraction_selected": 0.5021786492374728,
+      "negative_input_mae_observed": 0.08900170773267746,
+      "negative_input_mae_all": 0.04450085386633873,
+      "negative_input_max_change": 0.49600982666015625
+    },
+    "loss_original": 0.8093687295913696,
+    "loss_cl": 0.6920967102050781,
+    "loss_total": 0.8785784244537354,
+    "single_step_parameter_changes": {
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 6.010342764711505e-06,
+        "update_difference_l2": 0.006585422868728597,
+        "baseline_update_l2": 0.014552149345593306,
+        "cl_update_l2": 0.014489162332370024
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 2.6617493229985805e-06,
+        "update_difference_l2": 9.391752334124872e-05,
+        "baseline_update_l2": 0.003270498319856233,
+        "cl_update_l2": 0.003302116655307766
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 7.778833590254556e-06,
+        "update_difference_l2": 0.006122381634647719,
+        "baseline_update_l2": 0.010900957628663221,
+        "cl_update_l2": 0.010875372698097449
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 7.807618175852955e-06,
+        "update_difference_l2": 5.039576034042343e-06,
+        "baseline_update_l2": 0.0033095925226957028,
+        "cl_update_l2": 0.0033109601229261557
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 9.184259255889948e-12,
+      "an_mse": 0.00031001539900898933,
+      "ap_cos_distance": -1.6763806343078613e-08,
+      "an_cos_distance": 0.00038657989352941513,
+      "negative_softmax_probability": 0.49951672554016113,
+      "negative_not_farther_fraction": 0.0,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.692181587219238,
+      "negative_relative_penalty": 0.692181408405304,
+      "positive_view_grad_norm_mean": 1.3212779749748123e-08,
+      "negative_view_grad_norm_mean": 0.00030031420324935456,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 3.4098190351672283e-09,
+      "negative_shared_partial_grad_norm": 0.00011122418437912107,
+      "positive_selected_fraction": 0.00859375,
+      "positive_changed_fraction": 0.00390625,
+      "positive_clipped_fraction_selected": 0.5454545454545454,
+      "positive_input_mae_observed": 2.0769889488292392e-06,
+      "positive_input_mae_all": 1.0384944744146196e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "positive_input_mse_observed": 1.3076010274559735e-09,
+      "positive_clipped_fraction_observed": 0.0046875,
+      "positive_input_mae_changed": 0.0005317091709002852,
+      "positive_unchanged_student_fraction": 0.9609375,
+      "negative_selected_fraction": 0.73828125,
+      "negative_changed_fraction": 0.36015625,
+      "negative_clipped_fraction_selected": 0.5121693121693122,
+      "negative_input_mae_observed": 0.08636343479156494,
+      "negative_input_mae_all": 0.04318171739578247,
+      "negative_input_max_change": 0.49600982666015625,
+      "negative_input_mse_observed": 0.028311382979154587,
+      "negative_clipped_fraction_observed": 0.378125,
+      "negative_input_mae_changed": 0.23979435861110687,
+      "negative_unchanged_student_fraction": 0.0
+    }
+  },
+  "A1_R2": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 0.0004752397207768994,
+      "cl_shared_grad_norm": 4.622925671037279e-07,
+      "cl_to_original_grad_ratio": 0.0009727565834522289,
+      "weighted_cl_to_original_grad_ratio": 9.727565834522291e-05
+    },
+    "per_layer": {
+      "q_logits": {
+        "original_grad_norm": 0.0004409003013279289,
+        "cl_grad_norm": 3.357801290349016e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 4.995694325771183e-05,
+        "cl_grad_norm": 1.138998086958054e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 2.8488526368164457e-05,
+        "cl_grad_norm": 2.0186957883083778e-08,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 0.000137491209898144,
+        "cl_grad_norm": 1.1761324714143484e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 9.61695914156735e-05,
+        "cl_grad_norm": 2.7157423687640403e-07,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.8612105634474574e-08,
+      "an_mse": 8.831929335428867e-06,
+      "ap_cos_distance": 3.725290298461914e-09,
+      "an_cos_distance": 1.695007085800171e-07,
+      "negative_softmax_probability": 0.4999998211860657,
+      "negative_not_farther_fraction": 0.25,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8112648129463196,
+    "loss_cl": 0.693146824836731,
+    "loss_total": 0.8805794715881348,
+    "single_step_parameter_changes": {
+      "q_logits": {
+        "gradient_difference_l2": 3.3581777193255015e-08,
+        "update_difference_l2": 1.6704427673349474e-05,
+        "baseline_update_l2": 0.073983808229415,
+        "cl_update_l2": 0.07398344310537587
+      },
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.1373343899442746e-08,
+        "update_difference_l2": 4.4953611178137e-06,
+        "baseline_update_l2": 0.014624214588827865,
+        "cl_update_l2": 0.014624108889216504
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 2.0069410874984542e-09,
+        "update_difference_l2": 0.0,
+        "baseline_update_l2": 0.003312148769221308,
+        "cl_update_l2": 0.003312148769221308
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 1.1752629127548806e-08,
+        "update_difference_l2": 7.27342397564787e-08,
+        "baseline_update_l2": 0.010962510377313864,
+        "cl_update_l2": 0.010962507140209733
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 2.7158511262225063e-08,
+        "update_difference_l2": 1.862645149230957e-09,
+        "baseline_update_l2": 0.0033140196918637413,
+        "cl_update_l2": 0.0033140191304159776
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.8182957362000707e-08,
+      "an_mse": 8.287652235594578e-06,
+      "ap_cos_distance": 1.4901161193847656e-08,
+      "an_cos_distance": 1.387670636177063e-07,
+      "negative_softmax_probability": 0.49999985098838806,
+      "negative_not_farther_fraction": 0.3046875,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.693146228790283,
+      "negative_relative_penalty": 0.693146824836731,
+      "positive_view_grad_norm_mean": 1.5335831732647959e-07,
+      "negative_view_grad_norm_mean": 5.9854105751747355e-06,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 2.2078237225062116e-09,
+      "negative_shared_partial_grad_norm": 3.860470669052331e-07,
+      "positive_selected_fraction": 0.09609375,
+      "positive_changed_fraction": 0.0515625,
+      "positive_clipped_fraction_selected": 0.4634146341463415,
+      "positive_input_mae_observed": 0.00024155285791493952,
+      "positive_input_mae_all": 0.00012077642895746976,
+      "positive_input_max_change": 0.009784042835235596,
+      "positive_input_mse_observed": 1.508793275206699e-06,
+      "positive_clipped_fraction_observed": 0.04453125,
+      "positive_input_mae_changed": 0.004684661515057087,
+      "positive_unchanged_student_fraction": 0.609375,
+      "negative_selected_fraction": 0.5203125,
+      "negative_changed_fraction": 0.25625,
+      "negative_clipped_fraction_selected": 0.5075075075075075,
+      "negative_input_mae_observed": 0.012292473576962948,
+      "negative_input_mae_all": 0.006146236788481474,
+      "negative_input_max_change": 0.09916102886199951,
+      "negative_input_mse_observed": 0.0008106253808364272,
+      "negative_clipped_fraction_observed": 0.2640625,
+      "negative_input_mae_changed": 0.04797063022851944,
+      "negative_unchanged_student_fraction": 0.015625
+    }
+  },
+  "A1_R3": {
+    "positive": {
+      "selected_fraction": 0.01045,
+      "changed_fraction": 0.005025,
+      "clipped_fraction_selected": 0.5179425837320574,
+      "input_mae_observed": 2.512869286874775e-06,
+      "input_mae_all": 2.010295474974555e-06,
+      "input_max_change": 0.0009962916374206543
+    },
+    "negative": {
+      "selected_fraction": 0.5008875,
+      "changed_fraction": 0.2517625,
+      "clipped_fraction_selected": 0.4973671732674503,
+      "input_mae_observed": 0.012591703794896603,
+      "input_mae_all": 0.010073362849652767,
+      "input_max_change": 0.09999817609786987
+    },
+    "gradient": {
+      "original_shared_grad_norm": 0.0004752397207768994,
+      "cl_shared_grad_norm": 4.6308817607049956e-07,
+      "cl_to_original_grad_ratio": 0.0009744307048103323,
+      "weighted_cl_to_original_grad_ratio": 9.744307048103322e-05
+    },
+    "per_layer": {
+      "q_logits": {
+        "original_grad_norm": 0.0004409003013279289,
+        "cl_grad_norm": 3.363497000918869e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 4.995694325771183e-05,
+        "cl_grad_norm": 1.1406514488498942e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 2.8488526368164457e-05,
+        "cl_grad_norm": 2.014326661026189e-08,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 0.000137491209898144,
+        "cl_grad_norm": 1.176133537228452e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 9.61695914156735e-05,
+        "cl_grad_norm": 2.721580756315234e-07,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.3562971058755924e-11,
+      "an_mse": 8.831929335428867e-06,
+      "ap_cos_distance": -1.862645149230957e-09,
+      "an_cos_distance": 1.695007085800171e-07,
+      "negative_softmax_probability": 0.4999997913837433,
+      "negative_not_farther_fraction": 0.25,
+      "positive_selected_fraction": 0.009375,
+      "positive_changed_fraction": 0.0046875,
+      "positive_clipped_fraction_selected": 0.5,
+      "positive_input_mae_observed": 2.5224871933460236e-06,
+      "positive_input_mae_all": 1.2612435966730118e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "negative_selected_fraction": 0.50546875,
+      "negative_changed_fraction": 0.25703125,
+      "negative_clipped_fraction_selected": 0.49149922720247297,
+      "negative_input_mae_observed": 0.012679150328040123,
+      "negative_input_mae_all": 0.0063395751640200615,
+      "negative_input_max_change": 0.09916102886199951
+    },
+    "loss_original": 0.8112648129463196,
+    "loss_cl": 0.6931467652320862,
+    "loss_total": 0.8805794715881348,
+    "single_step_parameter_changes": {
+      "q_logits": {
+        "gradient_difference_l2": 3.363195632303016e-08,
+        "update_difference_l2": 1.6711345018516334e-05,
+        "baseline_update_l2": 0.073983808229415,
+        "cl_update_l2": 0.07398344605292279
+      },
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 1.1399359274279069e-08,
+        "update_difference_l2": 4.49357063280211e-06,
+        "baseline_update_l2": 0.014624214588827865,
+        "cl_update_l2": 0.014624112479061188
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 2.0029103794745444e-09,
+        "update_difference_l2": 0.0,
+        "baseline_update_l2": 0.003312148769221308,
+        "cl_update_l2": 0.003312148769221308
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 1.1752791014734006e-08,
+        "update_difference_l2": 7.302173681116802e-08,
+        "baseline_update_l2": 0.010962510377313864,
+        "cl_update_l2": 0.010962508137997783
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 2.7201300667517515e-08,
+        "update_difference_l2": 1.862645149230957e-09,
+        "baseline_update_l2": 0.0033140196918637413,
+        "cl_update_l2": 0.0033140191304159776
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.0814071860210106e-11,
+      "an_mse": 8.287652235594578e-06,
+      "ap_cos_distance": 1.30385160446167e-08,
+      "an_cos_distance": 1.387670636177063e-07,
+      "negative_softmax_probability": 0.49999985098838806,
+      "negative_not_farther_fraction": 0.2890625,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.693146228790283,
+      "negative_relative_penalty": 0.6931468844413757,
+      "positive_view_grad_norm_mean": 2.6723931885524576e-09,
+      "negative_view_grad_norm_mean": 5.985406836652308e-06,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 1.9465284905291325e-09,
+      "negative_shared_partial_grad_norm": 3.8593408526872005e-07,
+      "positive_selected_fraction": 0.00859375,
+      "positive_changed_fraction": 0.00390625,
+      "positive_clipped_fraction_selected": 0.5454545454545454,
+      "positive_input_mae_observed": 2.0769889488292392e-06,
+      "positive_input_mae_all": 1.0384944744146196e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "positive_input_mse_observed": 1.3076010274559735e-09,
+      "positive_clipped_fraction_observed": 0.0046875,
+      "positive_input_mae_changed": 0.0005317091709002852,
+      "positive_unchanged_student_fraction": 0.9609375,
+      "negative_selected_fraction": 0.5203125,
+      "negative_changed_fraction": 0.25625,
+      "negative_clipped_fraction_selected": 0.5075075075075075,
+      "negative_input_mae_observed": 0.012292473576962948,
+      "negative_input_mae_all": 0.006146236788481474,
+      "negative_input_max_change": 0.09916102886199951,
+      "negative_input_mse_observed": 0.0008106253808364272,
+      "negative_clipped_fraction_observed": 0.2640625,
+      "negative_input_mae_changed": 0.04797063022851944,
+      "negative_unchanged_student_fraction": 0.015625
+    }
+  },
+  "A1_R4": {
+    "positive": {
+      "selected_fraction": 0.1007375,
+      "changed_fraction": 0.050225,
+      "clipped_fraction_selected": 0.5014269760516193,
+      "input_mae_observed": 0.00025183867546729743,
+      "input_mae_all": 0.00020147094619460404,
+      "input_max_change": 0.009997665882110596
+    },
+    "negative": {
+      "selected_fraction": 0.7017125,
+      "changed_fraction": 0.3529375,
+      "clipped_fraction_selected": 0.4970340417193651,
+      "input_mae_observed": 0.08849677443504333,
+      "input_mae_all": 0.07079741358757019,
+      "input_max_change": 0.4999908208847046
+    },
+    "gradient": {
+      "original_shared_grad_norm": 0.0004752397207768994,
+      "cl_shared_grad_norm": 1.7465991316113754e-05,
+      "cl_to_original_grad_ratio": 0.03675196022664347,
+      "weighted_cl_to_original_grad_ratio": 0.003675196022664347
+    },
+    "per_layer": {
+      "q_logits": {
+        "original_grad_norm": 0.0004409003013279289,
+        "cl_grad_norm": 1.2452747796487529e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 4.995694325771183e-05,
+        "cl_grad_norm": 4.06047593060066e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 2.8488526368164457e-05,
+        "cl_grad_norm": 7.559075925200887e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 0.000137491209898144,
+        "cl_grad_norm": 4.3014733819290996e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 9.61695914156735e-05,
+        "cl_grad_norm": 1.0697120160330087e-05,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.8612105634474574e-08,
+      "an_mse": 0.0003302695113234222,
+      "ap_cos_distance": 3.725290298461914e-09,
+      "an_cos_distance": 6.131362169981003e-06,
+      "negative_softmax_probability": 0.49999234080314636,
+      "negative_not_farther_fraction": 0.03125,
+      "positive_selected_fraction": 0.0984375,
+      "positive_changed_fraction": 0.05390625,
+      "positive_clipped_fraction_selected": 0.4523809523809524,
+      "positive_input_mae_observed": 0.0002739109913818538,
+      "positive_input_mae_all": 0.0001369554956909269,
+      "positive_input_max_change": 0.009784042835235596,
+      "negative_selected_fraction": 0.7171875,
+      "negative_changed_fraction": 0.35703125,
+      "negative_clipped_fraction_selected": 0.5021786492374728,
+      "negative_input_mae_observed": 0.08900170773267746,
+      "negative_input_mae_all": 0.04450085386633873,
+      "negative_input_max_change": 0.49600982666015625
+    },
+    "loss_original": 0.8112648129463196,
+    "loss_cl": 0.6931319236755371,
+    "loss_total": 0.8805779814720154,
+    "single_step_parameter_changes": {
+      "q_logits": {
+        "gradient_difference_l2": 1.2452812017850285e-06,
+        "update_difference_l2": 0.008520935350026657,
+        "baseline_update_l2": 0.073983808229415,
+        "cl_update_l2": 0.07396566523159351
+      },
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 4.06037771230332e-07,
+        "update_difference_l2": 0.0010922177815635317,
+        "baseline_update_l2": 0.014624214588827865,
+        "cl_update_l2": 0.014593854589551035
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 7.558450879073946e-08,
+        "update_difference_l2": 2.29642316809631e-08,
+        "baseline_update_l2": 0.003312148769221308,
+        "cl_update_l2": 0.0033121622395169636
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 4.3013478983450645e-07,
+        "update_difference_l2": 3.253113927483342e-06,
+        "baseline_update_l2": 0.010962510377313864,
+        "cl_update_l2": 0.010962022890039873
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 1.0697286813711796e-06,
+        "update_difference_l2": 9.891329740994985e-08,
+        "baseline_update_l2": 0.0033140196918637413,
+        "cl_update_l2": 0.0033139961204031623
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.8182957362000707e-08,
+      "an_mse": 0.0002927720779553056,
+      "ap_cos_distance": 1.4901161193847656e-08,
+      "an_cos_distance": 5.191192030906677e-06,
+      "negative_softmax_probability": 0.4999935030937195,
+      "negative_not_farther_fraction": 0.0,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.693134307861328,
+      "negative_relative_penalty": 0.6931342482566833,
+      "positive_view_grad_norm_mean": 1.5337442561450646e-07,
+      "negative_view_grad_norm_mean": 3.669476985351287e-05,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 2.364751207435944e-09,
+      "negative_shared_partial_grad_norm": 1.3794011610378068e-05,
+      "positive_selected_fraction": 0.09609375,
+      "positive_changed_fraction": 0.0515625,
+      "positive_clipped_fraction_selected": 0.4634146341463415,
+      "positive_input_mae_observed": 0.00024155285791493952,
+      "positive_input_mae_all": 0.00012077642895746976,
+      "positive_input_max_change": 0.009784042835235596,
+      "positive_input_mse_observed": 1.508793275206699e-06,
+      "positive_clipped_fraction_observed": 0.04453125,
+      "positive_input_mae_changed": 0.004684661515057087,
+      "positive_unchanged_student_fraction": 0.609375,
+      "negative_selected_fraction": 0.73828125,
+      "negative_changed_fraction": 0.36015625,
+      "negative_clipped_fraction_selected": 0.5121693121693122,
+      "negative_input_mae_observed": 0.08636343479156494,
+      "negative_input_mae_all": 0.04318171739578247,
+      "negative_input_max_change": 0.49600982666015625,
+      "negative_input_mse_observed": 0.028311382979154587,
+      "negative_clipped_fraction_observed": 0.378125,
+      "negative_input_mae_changed": 0.23979435861110687,
+      "negative_unchanged_student_fraction": 0.0
+    }
+  },
+  "A1_R5": {
+    "positive": {
+      "selected_fraction": 0.01045,
+      "changed_fraction": 0.005025,
+      "clipped_fraction_selected": 0.5179425837320574,
+      "input_mae_observed": 2.512869286874775e-06,
+      "input_mae_all": 2.010295474974555e-06,
+      "input_max_change": 0.0009962916374206543
+    },
+    "negative": {
+      "selected_fraction": 0.7017125,
+      "changed_fraction": 0.3529375,
+      "clipped_fraction_selected": 0.4970340417193651,
+      "input_mae_observed": 0.08849677443504333,
+      "input_mae_all": 0.07079741358757019,
+      "input_max_change": 0.4999908208847046
+    },
+    "gradient": {
+      "original_shared_grad_norm": 0.0004752397207768994,
+      "cl_shared_grad_norm": 1.7466784472966098e-05,
+      "cl_to_original_grad_ratio": 0.036753629188259404,
+      "weighted_cl_to_original_grad_ratio": 0.00367536291882594
+    },
+    "per_layer": {
+      "q_logits": {
+        "original_grad_norm": 0.0004409003013279289,
+        "cl_grad_norm": 1.2453278941393364e-05,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.weight": {
+        "original_grad_norm": 4.995694325771183e-05,
+        "cl_grad_norm": 4.060705578012858e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_1.bias": {
+        "original_grad_norm": 2.8488526368164457e-05,
+        "cl_grad_norm": 7.559355026387493e-07,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.weight": {
+        "original_grad_norm": 0.000137491209898144,
+        "cl_grad_norm": 4.3015820665459614e-06,
+        "cl_finite": true
+      },
+      "f_nn.f_layer_2.bias": {
+        "original_grad_norm": 9.61695914156735e-05,
+        "cl_grad_norm": 1.0697664038161747e-05,
+        "cl_finite": true
+      }
+    },
+    "batch_diagnostics": {
+      "ap_mse": 1.3562971058755924e-11,
+      "an_mse": 0.0003302695113234222,
+      "ap_cos_distance": -1.862645149230957e-09,
+      "an_cos_distance": 6.131362169981003e-06,
+      "negative_softmax_probability": 0.49999234080314636,
+      "negative_not_farther_fraction": 0.03125,
+      "positive_selected_fraction": 0.009375,
+      "positive_changed_fraction": 0.0046875,
+      "positive_clipped_fraction_selected": 0.5,
+      "positive_input_mae_observed": 2.5224871933460236e-06,
+      "positive_input_mae_all": 1.2612435966730118e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "negative_selected_fraction": 0.7171875,
+      "negative_changed_fraction": 0.35703125,
+      "negative_clipped_fraction_selected": 0.5021786492374728,
+      "negative_input_mae_observed": 0.08900170773267746,
+      "negative_input_mae_all": 0.04450085386633873,
+      "negative_input_max_change": 0.49600982666015625
+    },
+    "loss_original": 0.8112648129463196,
+    "loss_cl": 0.6931318044662476,
+    "loss_total": 0.8805779814720154,
+    "single_step_parameter_changes": {
+      "q_logits": {
+        "gradient_difference_l2": 1.2453414135018653e-06,
+        "update_difference_l2": 0.008520994934875646,
+        "baseline_update_l2": 0.073983808229415,
+        "cl_update_l2": 0.07396566944145548
+      },
+      "f_nn.f_layer_1.weight": {
+        "gradient_difference_l2": 4.060516111157615e-07,
+        "update_difference_l2": 0.0010926473281756238,
+        "baseline_update_l2": 0.014624214588827865,
+        "cl_update_l2": 0.014593864222660633
+      },
+      "f_nn.f_layer_1.bias": {
+        "gradient_difference_l2": 7.557966676454316e-08,
+        "update_difference_l2": 2.29642316809631e-08,
+        "baseline_update_l2": 0.003312148769221308,
+        "cl_update_l2": 0.0033121622395169636
+      },
+      "f_nn.f_layer_2.weight": {
+        "gradient_difference_l2": 4.3014933381456563e-07,
+        "update_difference_l2": 3.2544185227502537e-06,
+        "baseline_update_l2": 0.010962510377313864,
+        "cl_update_l2": 0.01096202205653107
+      },
+      "f_nn.f_layer_2.bias": {
+        "gradient_difference_l2": 1.0697862849861222e-06,
+        "update_difference_l2": 9.891329740994985e-08,
+        "baseline_update_l2": 0.0033140196918637413,
+        "cl_update_l2": 0.0033139961204031623
+      }
+    },
+    "zero_single_step_exact_parity": true,
+    "status": "passed",
+    "observed_branch_loss_and_gradient_exact": true,
+    "observation_state_and_rng_unchanged": true,
+    "extra_diagnostics": {
+      "ap_mse": 1.0814071860210106e-11,
+      "an_mse": 0.0002927720779553056,
+      "ap_cos_distance": 1.30385160446167e-08,
+      "an_cos_distance": 5.191192030906677e-06,
+      "negative_softmax_probability": 0.4999935030937195,
+      "negative_not_farther_fraction": 0.0,
+      "positive_energy": -5.0,
+      "joint_log_partition": 5.693134307861328,
+      "negative_relative_penalty": 0.6931342482566833,
+      "positive_view_grad_norm_mean": 2.7343557915150923e-09,
+      "negative_view_grad_norm_mean": 3.669476672959381e-05,
+      "negative_view_grad_nonzero_fraction": 1.0,
+      "negative_view_grad_above_1e_12_fraction": 1.0,
+      "positive_shared_partial_grad_norm": 1.7333709346886057e-09,
+      "negative_shared_partial_grad_norm": 1.3794009448080316e-05,
+      "positive_selected_fraction": 0.00859375,
+      "positive_changed_fraction": 0.00390625,
+      "positive_clipped_fraction_selected": 0.5454545454545454,
+      "positive_input_mae_observed": 2.0769889488292392e-06,
+      "positive_input_mae_all": 1.0384944744146196e-06,
+      "positive_input_max_change": 0.0008288025856018066,
+      "positive_input_mse_observed": 1.3076010274559735e-09,
+      "positive_clipped_fraction_observed": 0.0046875,
+      "positive_input_mae_changed": 0.0005317091709002852,
+      "positive_unchanged_student_fraction": 0.9609375,
+      "negative_selected_fraction": 0.73828125,
+      "negative_changed_fraction": 0.36015625,
+      "negative_clipped_fraction_selected": 0.5121693121693122,
+      "negative_input_mae_observed": 0.08636343479156494,
+      "negative_input_mae_all": 0.04318171739578247,
+      "negative_input_max_change": 0.49600982666015625,
+      "negative_input_mse_observed": 0.028311382979154587,
+      "negative_clipped_fraction_observed": 0.378125,
+      "negative_input_mae_changed": 0.23979435861110687,
+      "negative_unchanged_student_fraction": 0.0
+    }
+  }
+}

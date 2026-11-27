@@ -1,0 +1,146 @@
+[
+  {
+    "mode": "A0",
+    "seed": 2026,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2026,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2026,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2027,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2027,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2027,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2028,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2028,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2028,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2026,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2026,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2026,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2027,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2027,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2027,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2028,
+    "condition": "R0",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2028,
+    "condition": "R1",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2028,
+    "condition": "R2",
+    "metrics_exact_replay": true,
+    "weights_export_exact": true,
+    "best_validation_acc_earliest_tie": true
+  }
+]

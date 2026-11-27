@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "A0",
+    "seed": 2026,
+    "R2_checkpoint_and_previous_log_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2026,
+    "R2_checkpoint_and_previous_log_exact": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2027,
+    "R2_checkpoint_and_previous_log_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2027,
+    "R2_checkpoint_and_previous_log_exact": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2028,
+    "R2_checkpoint_and_previous_log_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2028,
+    "R2_checkpoint_and_previous_log_exact": true
+  }
+]

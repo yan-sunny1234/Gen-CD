@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "A0",
+    "seed": 2026,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2026,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2027,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2027,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  },
+  {
+    "mode": "A0",
+    "seed": 2028,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  },
+  {
+    "mode": "A1",
+    "seed": 2028,
+    "checkpoint_exact": true,
+    "all_epoch_history_exact": true,
+    "metrics_exact": true
+  }
+]
